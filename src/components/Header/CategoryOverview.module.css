@@ -1,0 +1,20 @@
+
+.category_overview {
+    width: 100%;
+    min-height: 50vh;
+    padding: 20px;
+    position: absolute;
+    top: 110px;
+    background-color: white;
+    display: flex;
+}
+
+.category_overview .sub_categories_list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.category_overview .sub_categories_list li {
+    margin: 10px 0;
+    font-size: 14px;
+}

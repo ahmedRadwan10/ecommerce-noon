@@ -1,0 +1,139 @@
+{
+    "categories": [
+        { 
+            "id": 1, 
+            "title": "electronics", 
+            "subCategories": [
+                "TVs, Satellites & Accessories",
+                "Laptops & Accessories",
+                "Audio & Home Entertainment",
+                "Video Games",
+                "Cameras & Accessories",
+                "Printers & Accessories",
+                "Networking Products",
+                "Data Storage",
+                "Computer Components",
+                "Computer Accessories"
+            ],
+            "topBrands": [
+                "https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-06.png",
+                "assets/imgs/png/electronics/lg-brand.png",
+                "assets/imgs/png/electronics/sony-brand.png",
+                "assets/imgs/png/electronics/lenovo-brand.png",
+                "assets/imgs/png/electronics/dell-brand.png",
+                "assets/imgs/png/electronics/hp-brand.png",
+                "assets/imgs/png/electronics/apple-brand.png",
+                "assets/imgs/png/electronics/canon-brand.png",
+                "assets/imgs/png/electronics/msi-brand.png"
+            ],
+            "photos": [
+                "assets/imgs/png/electronics/en-drop-01.png",
+                "assets/imgs/png/electronics/en-drop-02.png"
+            ]
+        },
+        {
+            "id": 2, 
+            "title": "mobiles", 
+            "subCategories": [
+             
+            ],
+            "topBrands": [
+              
+            ],
+            "photos": [
+              
+            ]
+        },
+        {
+            "id": 3, 
+            "title": "men", 
+            "subCategories": [
+             
+            ],
+            "topBrands": [
+              
+            ],
+            "photos": [
+              
+            ]
+        },
+        {
+            "id": 4, 
+            "title": "home", 
+            "subCategories": [
+             
+            ],
+            "topBrands": [
+              
+            ],
+            "photos": [
+              
+            ]
+        },
+        {
+            "id": 5, 
+            "title": "beauty & health", 
+            "subCategories": [
+             
+            ],
+            "topBrands": [
+              
+            ],
+            "photos": [
+              
+            ]
+        },
+        {
+            "id": 6, 
+            "title": "baby & toys", 
+            "subCategories": [
+             
+            ],
+            "topBrands": [
+              
+            ],
+            "photos": [
+              
+            ]
+        },
+        {
+            "id": 7, 
+            "title": "supermarket", 
+            "subCategories": [
+             
+            ],
+            "topBrands": [
+              
+            ],
+            "photos": [
+              
+            ]
+        },
+        {
+            "id": 8, 
+            "title": "sell on noon", 
+            "subCategories": [
+             
+            ],
+            "topBrands": [
+              
+            ],
+            "photos": [
+              
+            ]
+        },
+        {
+            "id": 9, 
+            "title": "deals", 
+            "subCategories": [
+             
+            ],
+            "topBrands": [
+              
+            ],
+            "photos": [
+              
+            ]
+        }
+    ]
+}
