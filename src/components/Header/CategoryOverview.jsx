@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./CategoryOverview.module.css";
 
-const CategoryOverview = ({ categories, category }) => {
+const CategoryOverview = ({ categories, category, removeCategory }) => {
     const [visible, setVisibility] = useState(false);
 
 
@@ -22,11 +22,25 @@ const CategoryOverview = ({ categories, category }) => {
             (cat) => {
                 if (cat.id === category.id) {
                     return cat.topBrands.map((brandURL) =>
-                        <img key={brandURL} src={`../../../${brandURL}`} alt="Brand" />
+                        <img key={brandURL} src={brandURL} alt="Brand" />
                     )
                 }
             }
         );
+    }
+
+    const displayPhotos = () => {
+        if (category) return (
+            <>
+                <img src={category.photos[0]} alt="Category" />
+                <img src={category.photos[1]} alt="Category" />
+            </>
+        );
+    }
+
+    const hideCategoryOverview = () => {
+        console.log("left  !!!1");
+        removeCategory();
     }
 
     useEffect(() => {
@@ -36,7 +50,8 @@ const CategoryOverview = ({ categories, category }) => {
 
     return (
         <div className={styles.category_overview}
-            style={visible ? { display: 'block' } : { display: 'none' }}
+            style={visible ? { display: 'flex' } : { display: 'none' }}
+            onMouseLeave={hideCategoryOverview}
         >
             <div className={styles.sub_categories}>
                 <h5>CATEGORIES</h5>
@@ -45,7 +60,15 @@ const CategoryOverview = ({ categories, category }) => {
                 </ul>
             </div>
             <div className={styles.top_brands}>
-                {category !== null ? displayTopBrands() : ''}
+                <h5>TOP BRANDS</h5>
+                <div className={styles.imgs_container}>
+                    {category !== null ? displayTopBrands() : ''}
+               </div>
+            </div>
+            <div className={styles.photos}>
+                <div className={styles.photos_container}>
+                    {displayPhotos()}
+               </div>
             </div>
         </div>
     );
