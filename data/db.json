@@ -101,7 +101,7 @@
                 "Cookware",
                 "Drinkware",
                 "Bath & Bedding",
-                "Tools & Home Improvement",
+                "Home Improvement",
                 "Furniture",
                 "Home Decor",
                 "Kitchen & Dining"
@@ -209,29 +209,11 @@
         },
         {
             "id": 8, 
-            "title": "sell on noon", 
-            "subCategories": [
-             
-            ],
-            "topBrands": [
-              
-            ],
-            "photos": [
-              
-            ]
+            "title": "sell on noon"
         },
         {
             "id": 9, 
-            "title": "deals", 
-            "subCategories": [
-             
-            ],
-            "topBrands": [
-              
-            ],
-            "photos": [
-              
-            ]
+            "title": "deals"
         }
     ]
 }

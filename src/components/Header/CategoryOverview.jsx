@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeSelectedCategory, updateCategoryOverviewMouseState } from "../../redux/slices/categorySlice";
+import { removeSelectedCategory } from "../../redux/slices/categorySlice";
 import styles from "./CategoryOverview.module.css";
 
 const CategoryOverview = ({ categories }) => {
@@ -9,7 +9,7 @@ const CategoryOverview = ({ categories }) => {
 
 
     const displaySubCategories = () => {
-        if (categories && selectedCategory) return categories.map(
+        if (visible && selectedCategory[0].id <= 7) return categories.map(
             (cat) => {
                 if (cat.id === selectedCategory[0].id) {
                     return cat.subCategories.map((sub) =>
@@ -21,7 +21,7 @@ const CategoryOverview = ({ categories }) => {
     }
 
     const displayTopBrands = () => {
-        if (categories && selectedCategory) return categories.map(
+        if (visible && selectedCategory[0].id <= 7) return categories.map(
             (cat) => {
                 if (cat.id === selectedCategory[0].id) {
                     return cat.topBrands.map((brandURL) =>
@@ -33,7 +33,7 @@ const CategoryOverview = ({ categories }) => {
     }
 
     const displayPhotos = () => {
-        if (categories && selectedCategory) return (
+        if (visible && selectedCategory[0].id <= 7) return (
             <>
                 <img src={selectedCategory[0].photos[0]} alt="Category" />
                 <img src={selectedCategory[0].photos[1]} alt="Category" />
@@ -47,25 +47,27 @@ const CategoryOverview = ({ categories }) => {
     }, [selectedCategory])
 
     return (
-        <div className={styles.category_overview}
+        <div className={styles.category_overview_container}
             style={ visible ? { display: 'flex' } :  { display: 'none' }}
         >
-            <div className={styles.sub_categories}>
-                <h5>CATEGORIES</h5>
-                <ul className={styles.sub_categories_list}>
-                   { displaySubCategories() }
-                </ul>
-            </div>
-            <div className={styles.top_brands}>
-                <h5>TOP BRANDS</h5>
-                <div className={styles.imgs_container}>
-                    { displayTopBrands() }
-               </div>
-            </div>
-            <div className={styles.photos}>
-                <div className={styles.photos_container}>
-                    { displayPhotos() }
-               </div>
+            <div className={styles.category_overview}>
+                <div className={styles.sub_categories}>
+                    <h5>CATEGORIES</h5>
+                    <ul className={styles.sub_categories_list}>
+                    { displaySubCategories() }
+                    </ul>
+                </div>
+                <div className={styles.top_brands}>
+                    <h5>TOP BRANDS</h5>
+                    <div className={styles.imgs_container}>
+                        { displayTopBrands() }
+                    </div>
+                </div>
+                <div className={styles.photos}>
+                    <div className={styles.photos_container}>
+                        { displayPhotos() }
+                    </div>
+                </div>
             </div>
         </div>
     );

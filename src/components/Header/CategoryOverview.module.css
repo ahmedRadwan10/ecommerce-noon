@@ -1,4 +1,13 @@
 
+.category_overview_container {
+    position: fixed;
+    top: 110px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(90, 88, 88, 0.2);
+}
+
 .category_overview {
     width: 100%;
     min-height: 50vh;
@@ -12,7 +21,7 @@
 }
 
 .category_overview .sub_categories_list {
-    width: 180px;
+    width: 200px;
     list-style: none;
     margin-top: 15px;
 }
@@ -31,19 +40,18 @@
 
 
 .category_overview .top_brands {
-    width: 450px;
+    width: 30%;
     margin-right: 100px;
+}
+
+.category_overview .top_brands .imgs_container {
+    width: 600px;
 }
 
 .category_overview .top_brands h5 {
     margin-bottom: 15px;
     width: fit-content;
 }
-
-.category_overview .top_brands .imgs_container {
-    width: 560px;
-}
-
 
 .category_overview .top_brands img {
     width: 180px;
@@ -56,6 +64,7 @@
 
 .category_overview .photos_container {
     display: flex;
+    margin-top: 40px;
 }
 
 .category_overview .photos_container img  {
@@ -65,4 +74,8 @@
 .category_overview .photos_container img:first-of-type {
     width: 400px;
     margin-right: 15px;
+}
+
+.category_overview .photos_container img:nth-of-type(2) {
+    width: 200px;
 }

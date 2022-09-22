@@ -26,6 +26,7 @@
   /* ...bg-colors... */
   --bg01: #fff9f4;
   --bg02: #fcfbf4;
+  --bg03: #f7f7fa;
   /* ...other variables... */
   --radius-sm: 5px;
   --radius-md: 10px;
@@ -37,4 +38,5 @@
 
 body {
     font-family: var(--en-font);
+    background-color: var(--bg03);
 }
