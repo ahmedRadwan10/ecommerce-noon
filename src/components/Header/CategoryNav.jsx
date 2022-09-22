@@ -6,7 +6,6 @@ import CategoryOverview from "./CategoryOverview";
 
 const CategoryNav = ({ styles }) => {
     const categories = useSelector(state => state.categories.allCategories.payload);
-    const categoryOverviewIsVisible = useSelector(state => state.categories.categoryOverview.isVisible);
     const dispatch = useDispatch();
     const categoryList = useRef();
 
@@ -60,7 +59,7 @@ const CategoryNav = ({ styles }) => {
                     </button>
                 </div>
             </div>
-            <CategoryOverview categories={categories} />
+            <CategoryOverview />
         </>
     );
 };

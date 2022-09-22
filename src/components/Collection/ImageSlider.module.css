@@ -1,0 +1,45 @@
+
+.header_img_container {
+    cursor: pointer;
+    
+}
+
+.header_img_container img {
+    width: 100%;
+}
+
+.imgs_slider_container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.imgs_slider_container button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.5;
+} 
+
+.imgs_slider_container button img {
+    width: 25px;
+    height: 25px;
+}
+
+.imgs_slider_container button:first-of-type {
+    left: 30px;
+}
+
+.imgs_slider_container button:nth-of-type(2) {
+    right: 30px;
+}

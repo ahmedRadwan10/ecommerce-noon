@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeSelectedCategory } from "../../redux/slices/categorySlice";
 import styles from "./CategoryOverview.module.css";
 
-const CategoryOverview = ({ categories }) => {
+const CategoryOverview = () => {
+    const categories = useSelector(state => state.categories.allCategories.payload);
     const selectedCategory = useSelector(state => state.categories.selectedCategory.payload);
     const [visible, setVisibile] = useState(false);
 

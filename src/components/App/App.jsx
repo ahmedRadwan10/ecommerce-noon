@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from '../Home/Home';
+import Collection from '../Collection/Collection';
 import Header from '../Header/Header';
 import './App.css';
 import CategoryNav from '../Header/CategoryNav';
@@ -12,7 +12,7 @@ function App() {
         <Header />
         <CategoryNav styles={styles} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Collection />} />
         </Routes>
       </BrowserRouter>
     </div>
