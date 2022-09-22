@@ -8,10 +8,11 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 5px;
 }
 
 .category_overview .sub_categories_list {
+    width: 180px;
     list-style: none;
     margin-top: 15px;
 }
@@ -19,6 +20,7 @@
 .category_overview .sub_categories_list li {
     margin: 10px 0;
     font-size: 14px;
+    font-weight: 300;
     cursor: pointer;
 }
 
@@ -29,7 +31,8 @@
 
 
 .category_overview .top_brands {
-    
+    width: 450px;
+    margin-right: 100px;
 }
 
 .category_overview .top_brands h5 {
@@ -53,6 +56,10 @@
 
 .category_overview .photos_container {
     display: flex;
+}
+
+.category_overview .photos_container img  {
+    object-fit: cover;
 }
 
 .category_overview .photos_container img:first-of-type {

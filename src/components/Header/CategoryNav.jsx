@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getCategories } from "../../apis/categories";
+import { hideCategoryOverview, removeSelectedCategory, selectCategory, showCategoryOverview } from "../../redux/slices/categorySlice";
 import CategoryOverview from "./CategoryOverview";
 
 const CategoryNav = ({ styles }) => {
-    const categories = useSelector(state => state.categories.data.payload);
+    const categories = useSelector(state => state.categories.allCategories.payload);
+    const categoryOverviewIsVisible = useSelector(state => state.categories.categoryOverview.isVisible);
     const dispatch = useDispatch();
-    const [category, setCategory] = useState(null);
     const categoryList = useRef();
 
     const scrollListToLeft = () => {
@@ -17,27 +18,19 @@ const CategoryNav = ({ styles }) => {
         categoryList.current.scrollLeft += 150;
     }
 
-    const toggleCategory = (id) => {
-        let toggledCategory = categories.filter(
-            cat => cat.id === id
+    const selectCurrentCategory = (categoryID) => {
+        let currentCategory = categories.filter(
+            cat => cat.id === categoryID
         );
-        setCategory(...toggledCategory || null);
-    }
-
-    const removeCategory = () => {
-        setCategory(null);
-    }
-
-    const handleItemOnMouseLeave = (id) => {
-        if (category.id === id) setCategory(null);
+        dispatch(selectCategory(currentCategory));
+        dispatch(showCategoryOverview());
     }
     
     const displayCategories = () => {
         if (categories) return categories.map(
             (category) =>
                 <li key={category.id}
-                    onMouseOver={() => toggleCategory(category.id)}
-                    onMouseLeave={() => handleItemOnMouseLeave(category.id)}
+                    onMouseOver={() => selectCurrentCategory(category.id)}
                 >
                     {category.title.toUpperCase()}
                 </li>
@@ -67,11 +60,7 @@ const CategoryNav = ({ styles }) => {
                     </button>
                 </div>
             </div>
-            <CategoryOverview
-                categories={categories}
-                category={category}
-                removeCategory={removeCategory}
-            />
+            <CategoryOverview categories={categories} />
         </>
     );
 };
