@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeSelectedCategory } from "../../redux/slices/categorySlice";
 import styles from "./CategoryOverview.module.css";
@@ -7,6 +7,7 @@ const CategoryOverview = () => {
     const categories = useSelector(state => state.categories.allCategories.payload);
     const selectedCategory = useSelector(state => state.categories.selectedCategory.payload);
     const [visible, setVisibile] = useState(false);
+    const categoryOverviewContainer = useRef();
 
 
     const displaySubCategories = () => {
@@ -42,6 +43,17 @@ const CategoryOverview = () => {
         );
     }
 
+    const handleOnMouseLeave = () => {
+        let elementsMouseOver = document.querySelectorAll(":hover" )
+        let elementsArray = [...elementsMouseOver];
+        let currentMouseOverElement = elementsArray.at(-1);
+
+        if (currentMouseOverElement !== categoryOverviewContainer.current) {
+            setVisibile(false);
+        }
+
+    }
+
     useEffect(() => {
         if (selectedCategory && selectedCategory[0].id <= 7) setVisibile(true);
         else setVisibile(false)
@@ -49,9 +61,12 @@ const CategoryOverview = () => {
 
     return (
         <div className={styles.category_overview_container}
-            style={ visible ? { display: 'flex' } :  { display: 'none' }}
+            style={visible ? { display: 'flex' } : { display: 'none' }}
         >
-            <div className={styles.category_overview}>
+            <div ref={categoryOverviewContainer}
+                className={styles.category_overview}
+                onMouseLeave={handleOnMouseLeave}
+            >
                 <div className={styles.sub_categories}>
                     <h5>CATEGORIES</h5>
                     <ul className={styles.sub_categories_list}>

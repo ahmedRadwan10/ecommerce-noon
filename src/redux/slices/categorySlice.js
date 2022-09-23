@@ -3,9 +3,6 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
       allCategories: [],
       selectedCategory: {},
-      categoryOverview: {
-        isVisible: false,
-      }
 }
 
 export const categorySlice = createSlice({
@@ -20,16 +17,10 @@ export const categorySlice = createSlice({
     },
     removeSelectedCategory: (state) => {
           state.selectedCategory = {};
-    },
-    showCategoryOverview: (state) => {
-      state.categoryOverview.isVisible = true;
-    },
-    hideCategoryOverview: (state) => {
-      state.categoryOverview.isVisible = false;
-    },
+    }
   }
 });
 
-export const { fetchCategories, selectCategory, removeSelectedCategory, showCategoryOverview, hideCategoryOverview } = categorySlice.actions;
+export const { fetchCategories, selectCategory, removeSelectedCategory } = categorySlice.actions;
 
 export default categorySlice.reducer;

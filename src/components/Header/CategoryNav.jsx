@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getCategories } from "../../apis/categories";
-import { hideCategoryOverview, removeSelectedCategory, selectCategory, showCategoryOverview } from "../../redux/slices/categorySlice";
+import { removeSelectedCategory, selectCategory } from "../../redux/slices/categorySlice";
 import CategoryOverview from "./CategoryOverview";
 
 const CategoryNav = ({ styles }) => {
@@ -22,7 +22,15 @@ const CategoryNav = ({ styles }) => {
             cat => cat.id === categoryID
         );
         dispatch(selectCategory(currentCategory));
-        dispatch(showCategoryOverview());
+    }
+
+    const handleOnMouseLeave = () => {
+        let elementsMouseOver = document.querySelectorAll(":hover" )
+        let elementsArray = [...elementsMouseOver];
+        let currentMouseOverElement = elementsArray.at(-1);
+
+
+
     }
     
     const displayCategories = () => {
@@ -30,6 +38,7 @@ const CategoryNav = ({ styles }) => {
             (category) =>
                 <li key={category.id}
                     onMouseOver={() => selectCurrentCategory(category.id)}
+                    onMouseLeave={handleOnMouseLeave}
                 >
                     {category.title.toUpperCase()}
                 </li>

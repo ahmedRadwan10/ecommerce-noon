@@ -1,18 +1,29 @@
 
 .header_img_container {
     cursor: pointer;
-    
+    background-color: #3A86C2;
 }
 
 .header_img_container img {
     width: 100%;
+    object-fit: cover;
 }
 
+
 .imgs_slider_container {
+    position: relative;
+}
+
+.imgs_slider_container .imgs_slider {
     display: flex;
     overflow: hidden;
-    position: relative;
     scroll-behavior: smooth;
+}
+
+.imgs_slider_container .imgs_slider img {
+    min-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
 }
 
 .imgs_slider_container button {
@@ -42,4 +53,24 @@
 
 .imgs_slider_container button:nth-of-type(2) {
     right: 30px;
+}
+
+
+.imgs_slider_container .pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.imgs_slider_container .pagination span {
+    display: block;
+    background-color: var(--bg03);
+    width: 30px;
+    height: 5px;
+    border-radius: 20px;
 }
