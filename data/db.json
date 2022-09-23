@@ -215,5 +215,31 @@
             "id": 9, 
             "title": "deals"
         }
-    ]
+    ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "homeSlider" : {
+        "headerImg" : "https://f.nooncdn.com/cms/pages/20220915/db40b276b580ce6c408b1a1b90dec594/en_dk_eg-toggle-01.png",
+        "sliderImgs" : [
+            "https://f.nooncdn.com/cms/pages/20220920/60c6d66b9b79b8674453b3231c75428a/en_dk_eg-banner-01.png",
+            "https://f.nooncdn.com/cms/pages/20220918/bb6848e7e20efc8944920c3019f8a890/en_dk_eg-hero-01.gif",
+            "https://f.nooncdn.com/cms/pages/20220921/16d6544be8236f2672f7eebc097fe28b/en_dk_eg-hero-banner-01.png",
+            "https://f.nooncdn.com/cms/pages/20220919/1c6fd9c4afd5c575a8a36d30ab05b265/en_dk_eg-banner-01.png",
+            "https://f.nooncdn.com/cms/pages/20220922/f8fea5eef15a809e976d3cbc6d17cb32/en_dk_eg-hero-01.png"
+        ]
+    }
+
+
 }

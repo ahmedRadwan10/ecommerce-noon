@@ -5,7 +5,7 @@ import { removeSelectedCategory, selectCategory } from "../../redux/slices/categ
 import CategoryOverview from "./CategoryOverview";
 
 const CategoryNav = ({ styles }) => {
-    const categories = useSelector(state => state.categories.allCategories.payload);
+    const categories = useSelector(state => state.categoryState.allCategories.payload);
     const dispatch = useDispatch();
     const categoryList = useRef();
 
@@ -29,7 +29,9 @@ const CategoryNav = ({ styles }) => {
         let elementsArray = [...elementsMouseOver];
         let currentMouseOverElement = elementsArray.at(-1);
 
-
+        // if (currentMouseOverElement !== ) {
+        //     dispatch(removeSelectedCategory());
+        // }
 
     }
     

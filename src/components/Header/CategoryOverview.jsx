@@ -4,10 +4,10 @@ import { removeSelectedCategory } from "../../redux/slices/categorySlice";
 import styles from "./CategoryOverview.module.css";
 
 const CategoryOverview = () => {
-    const categories = useSelector(state => state.categories.allCategories.payload);
-    const selectedCategory = useSelector(state => state.categories.selectedCategory.payload);
+    const categories = useSelector(state => state.categoryState.allCategories.payload);
+    const selectedCategory = useSelector(state => state.categoryState.selectedCategory.payload);
     const [visible, setVisibile] = useState(false);
-    const categoryOverviewContainer = useRef();
+    const categoryOverviewElement = useRef();
 
 
     const displaySubCategories = () => {
@@ -48,7 +48,7 @@ const CategoryOverview = () => {
         let elementsArray = [...elementsMouseOver];
         let currentMouseOverElement = elementsArray.at(-1);
 
-        if (currentMouseOverElement !== categoryOverviewContainer.current) {
+        if (currentMouseOverElement !== categoryOverviewElement.current) {
             setVisibile(false);
         }
 
@@ -63,7 +63,7 @@ const CategoryOverview = () => {
         <div className={styles.category_overview_container}
             style={visible ? { display: 'flex' } : { display: 'none' }}
         >
-            <div ref={categoryOverviewContainer}
+            <div ref={categoryOverviewElement}
                 className={styles.category_overview}
                 onMouseLeave={handleOnMouseLeave}
             >
