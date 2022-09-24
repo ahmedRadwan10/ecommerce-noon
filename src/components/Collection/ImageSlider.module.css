@@ -67,12 +67,11 @@
     gap: 8px;
 }
 
-.imgs_slider_container .pagination .pagination_span {
+.imgs_slider_container .pagination span {
     display: block;
     background-color: var(--bg03);
     width: 30px;
     height: 5px;
     border-radius: 20px;
-    opacity: 0.5;
+    transition: 0.3s all ease;
 }
-
