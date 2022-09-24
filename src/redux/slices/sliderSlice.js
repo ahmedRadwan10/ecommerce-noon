@@ -1,7 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    currentSlider: {}
+  currentSlider: {
+    payload: {}
+  }
 };
 
 export const sliderSlice = createSlice({

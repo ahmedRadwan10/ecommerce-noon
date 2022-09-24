@@ -67,7 +67,7 @@
     gap: 8px;
 }
 
-.imgs_slider_container .pagination span {
+.imgs_slider_container .pagination .pagination_span {
     display: block;
     background-color: var(--bg03);
     width: 30px;

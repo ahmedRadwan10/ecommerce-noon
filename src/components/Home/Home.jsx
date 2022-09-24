@@ -6,17 +6,17 @@ import { getSliderImgs } from "../../apis/collection";
 
 
 const Home = () => {
-  const sliderImgsArr = useSelector(state => console.log(state.sliderState));
-  const headerImgURL = useSelector(state => state.sliderState.currentSlider.payload.headerImg);
+  const sliderImgs = useSelector(({ sliderState }) => sliderState.currentSlider.payload.sliderImgs);
+  const headerImg = useSelector(({ sliderState }) => sliderState.currentSlider.payload.headerImg);
   const dispatch = useDispatch();
 
   useEffect(() => {
     getSliderImgs(dispatch, 'homeSlider');
-  }, [])
+  },[])
 
     return (
         <div className={styles.home_container}>
-          <ImageSlider sliderImgs={sliderImgsArr} headerImg={headerImgURL} />
+          <ImageSlider sliderImgs={sliderImgs} headerImg={headerImg} />
         </div>
     );
 };
