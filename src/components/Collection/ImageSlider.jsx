@@ -2,44 +2,44 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./ImageSlider.module.css";
 
 const ImageSlider = ({ sliderImgs, headerImg }) => {
+    const [sliderIsAutoplay, setAutoplay] = useState(true);
+    const [currentPaginationIndex, setIndex] = useState(0);
     const [sliderImgsCount, setCount] = useState(0);
     const imgsSliderElement = useRef();
     const paginationElement = useRef();
-    const [sliderIsAutoplay, setAutoplay] = useState(true);
-    let currentPaginationIndex = 0;
 
     const getNumberOfSliderImgs = () => {
         if (sliderImgs) setCount(sliderImgs.length);
     }
     
     const scrollImgsToLeft = () => {
-        if (sliderIsAutoplay) sliderIsAutoplay = false;
+        if (sliderIsAutoplay) setAutoplay(false);
         let imgSliderWidth = imgsSliderElement.current.offsetWidth;
         
         if (currentPaginationIndex === 0) {
             imgsSliderElement.current.scrollLeft = imgSliderWidth * (sliderImgsCount);
-            currentPaginationIndex = sliderImgsCount - 1;
+            setIndex(sliderImgsCount - 1);
         }
         else {
             imgsSliderElement.current.scrollLeft -= imgSliderWidth;
-            currentPaginationIndex--;
+            setIndex(prev => prev - 1);
         }
-        updatePagination();
+        updatePagination(currentPaginationIndex === 0 ? sliderImgsCount - 1 : currentPaginationIndex - 1);
     }
     
     const scrollImgsToRight = () => {
-        if (sliderIsAutoplay) sliderIsAutoplay = false;
+        if (sliderIsAutoplay) setAutoplay(false);
         let imgSliderWidth = imgsSliderElement.current.offsetWidth;
         
         if (currentPaginationIndex === sliderImgsCount - 1) {
             imgsSliderElement.current.scrollLeft = 0;
-            currentPaginationIndex = 0;
+            setIndex(0);
         }
         else {
             imgsSliderElement.current.scrollLeft += imgSliderWidth;
-            currentPaginationIndex++;
+            setIndex(prev => prev + 1);
         }
-        updatePagination();
+        updatePagination(currentPaginationIndex + 1);
     }
 
     const displaySliderImgs = () => {
@@ -54,13 +54,13 @@ const ImageSlider = ({ sliderImgs, headerImg }) => {
         if (sliderImgs) return sliderImgs.map(img => <span className={styles.pagination_span} key={img}></span>);
     }
 
-    const updatePagination = () => {
+    const updatePagination = (index = 0) => {
         let spansArr = [...paginationElement.current.children];
         if (sliderImgs) {
             spansArr.forEach((span) => {
                 span.style.backgroundColor = "var(--bg03)";
             });
-            paginationElement.current.children[currentPaginationIndex].style.backgroundColor = "var(--yellow)";
+            paginationElement.current.children[index === sliderImgsCount ? 0 : index ].style.backgroundColor = "var(--yellow)";
         }
     }
 
@@ -69,13 +69,13 @@ const ImageSlider = ({ sliderImgs, headerImg }) => {
         
         if (currentPaginationIndex === sliderImgsCount - 1) {
             imgsSliderElement.current.scrollLeft = 0;
-            currentPaginationIndex = 0;
+            setIndex(0);
         }
         else {
             imgsSliderElement.current.scrollLeft += imgSliderWidth;
-            currentPaginationIndex++;
+            setIndex(prev => prev + 1);
         }
-        updatePagination();
+        updatePagination(currentPaginationIndex + 1);
     }
 
     let sliderInterval;
@@ -88,7 +88,7 @@ const ImageSlider = ({ sliderImgs, headerImg }) => {
     useEffect(() => {
         if (sliderIsAutoplay && sliderImgsCount) playSlider();
         return () => clearInterval(sliderInterval);
-    }, [sliderIsAutoplay]);
+    }, [sliderIsAutoplay, sliderImgsCount, currentPaginationIndex]);
     
     useEffect(() => {
         getNumberOfSliderImgs();
