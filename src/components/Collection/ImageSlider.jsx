@@ -82,7 +82,7 @@ const ImageSlider = ({ sliderImgs, headerImg }) => {
     const playSlider = () => {
         sliderInterval = setInterval(() => {
             autoscrollImgs();
-        }, 2000)
+        }, 3000)
     }
 
     useEffect(() => {

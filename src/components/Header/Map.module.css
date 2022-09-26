@@ -1,0 +1,79 @@
+
+.map_modal_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--overlay);
+}
+
+.map_modal_container {
+    width: 60vw;
+    height: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg01);
+    border-radius: var(--radius-sm);
+}
+
+.map_header {
+    padding: 15px 30px;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dark-gray);
+}
+
+
+.map_header h3 {
+}
+
+.map_header div {
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.map_header div:hover {
+    opacity: 0.7;
+}
+
+.map {
+    width: 100%;
+    height: 78%;
+}
+
+.confirm_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 12%;
+    padding: 0 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.confirm_container button {
+    width: 165px;
+    padding: 15px 0;
+    outline: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--blue);
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+
+
+
+.confirm_container button:hover {
+    opacity: 0.7;
+}

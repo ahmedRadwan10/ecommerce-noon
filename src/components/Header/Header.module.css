@@ -25,13 +25,19 @@
 
 .location_container {
     display: flex;
+    cursor: pointer;
+    transition: 0.3s all ease;
 } 
+
+.location_container:hover {
+    opacity: 0.7;
+}
 
 .delivery_container {
     margin-left: 15px;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
+    width: 150px;
 }
 
 .text_container {
@@ -47,9 +53,23 @@
 } 
 
 .location_text {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-size: 14px;
     font-weight: 800;
+    font-family: var(--ar-font);
     color: var(--dark-gray);
+    transition: 0.3s all ease;
+}
+
+.location_text:lang(ar) {
+    direction: rtl;
+}
+
+.location_text:hover {
+    overflow: visible;
 }
 
 /* ... Search Bar... */

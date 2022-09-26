@@ -24,6 +24,7 @@
   --light-gray: #808080;
   --dark-gray: #404553;
   /* ...bg-colors... */
+  --overlay: rgba(90, 88, 88, 0.7);
   --bg01: #fff9f4;
   --bg02: #fcfbf4;
   --bg03: #f7f7fa;
