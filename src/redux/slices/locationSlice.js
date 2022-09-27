@@ -1,21 +1,32 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  currentLocation: {
-    payload: "Cairo"
-  }
+      address: "Cairo",
+      lat: 30.033333,
+      lng: 31.233334,
+      addressChanged: false
 };
 
 export const locationSlice = createSlice({
   name: 'location',
   initialState,
   reducers: {
-    updateLocation: (state, newLocation) => {
-          state.currentLocation = newLocation;
+    updateLocationAddress: (state, action) => {
+      state.address = action.payload;
     },
+    updateLocationLatlng: (state, action) => {
+      state.lat = action.payload.lat;
+      state.lng = action.payload.lng;
+    },
+    confirmAddressChanged: (state) => {
+      state.addressChanged = true;
+    },
+    resetAddressChanged: (state) => {
+      state.addressChanged = false;
+    }
   }
 });
 
-export const { updateLocation } = locationSlice.actions;
+export const { updateLocationAddress, updateLocationLatlng, confirmAddressChanged, resetAddressChanged } = locationSlice.actions;
 
 export default locationSlice.reducer;

@@ -1,17 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  currentSlider: {
-    payload: {}
-  }
+  sliderImgs: [],
+  headerImg: ""
 };
 
 export const sliderSlice = createSlice({
   name: 'slider',
   initialState,
   reducers: {
-    fetchSlider: (state, responseData) => {
-          state.currentSlider = responseData;
+    fetchSlider: (state, action) => {
+      state.sliderImgs = action.payload.sliderImgs;
+      state.headerImg = action.payload.headerImg;
     },
   }
 });

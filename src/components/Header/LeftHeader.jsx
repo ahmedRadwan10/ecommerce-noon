@@ -1,11 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { resetAddressChanged } from "../../redux/slices/locationSlice";
 import Map from "./Map";
 
 const LeftHeader = ({ styles }) => {
     const [mapIsShown, setMapIsShown] = useState(false);
-    const currentLocation = useSelector(({ locationState }) => locationState.currentLocation.payload);
+    const currentLocation = useSelector(({ locationState }) => locationState.address);
+    const addressChanged = useSelector(({ locationState }) => locationState.addressChanged);
+    const dispatch = useDispatch();
 
     const showMap = () => {
         setMapIsShown(true);
@@ -13,6 +16,7 @@ const LeftHeader = ({ styles }) => {
 
     const hideMap = () => {
         setMapIsShown(false);
+        if (addressChanged) dispatch(resetAddressChanged());
     }
 
     return (

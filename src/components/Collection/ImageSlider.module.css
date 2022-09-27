@@ -75,3 +75,8 @@
     border-radius: 20px;
     transition: 0.3s all ease;
 }
+
+.imgs_slider_container .pagination span:first-of-type {
+    background-color: var(--yellow);
+}
+

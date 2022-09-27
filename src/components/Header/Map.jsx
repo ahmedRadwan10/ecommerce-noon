@@ -1,9 +1,29 @@
-import React from 'react';
+import { CircularProgress } from '@mui/material';
+import React, { useRef } from 'react';
+import { useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateLocationAddress } from '../../redux/slices/locationSlice';
 import GoogleMap from './GoogleMap';
 import styles from './Map.module.css';
 
 const Map = ({ isShown, hideMap }) => {
+  const lat = useSelector(({ locationState }) => locationState.lat);
+  const lng = useSelector(({ locationState }) => locationState.lng);
+  const addressChanged = useSelector(({ locationState }) => locationState.addressChanged);
+  const dispatch = useDispatch();
+ 
+  const getReverseGeocodingData = async () => {
+    const response = await fetch(`https://geocode.arcgis.com/arcgis/rest/services/World/Geocodeserver/reverseGeocode?f=pjson&featureTypes=&location=${lat},${lng}`);
+    const data = await response.json();
+    dispatch(updateLocationAddress(data.address.Match_addr));
+  }
+  
+  const confirmLocation = () => {
+    getReverseGeocodingData();
+    hideMap();
+  }
+
   if (isShown) return ReactDOM.createPortal(
     <div className={styles.map_modal_overlay}>
       <div className={styles.map_modal_container}>
@@ -23,7 +43,9 @@ const Map = ({ isShown, hideMap }) => {
           />
         </div>
         <div className={styles.confirm_container}>
-          <button onClick={hideMap}>Confirm Location</button>
+          <button onClick={confirmLocation} disabled={!addressChanged}>
+            Confirm Location
+          </button>
         </div>
       </div>
     </div>,

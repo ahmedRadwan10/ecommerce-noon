@@ -9,11 +9,11 @@ export const categorySlice = createSlice({
   name: 'category',
   initialState,
   reducers: {
-    fetchCategories: (state, responseData) => {
-          state.allCategories = responseData;
+    fetchCategories: (state, action) => {
+          state.allCategories = action.payload;
     },
-    selectCategory: (state, category) => {
-          state.selectedCategory = category;
+        selectCategory: (state, action) => {
+          state.selectedCategory = action.payload[0];
     },
     removeSelectedCategory: (state) => {
           state.selectedCategory = {};

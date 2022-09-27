@@ -92,8 +92,6 @@ const ImageSlider = ({ sliderImgs, headerImg }) => {
     
     useEffect(() => {
         getNumberOfSliderImgs();
-        displayPagination();
-        updatePagination();
     }, [sliderImgs]);
 
     return (

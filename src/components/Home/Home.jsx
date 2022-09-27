@@ -6,8 +6,8 @@ import { getSliderImgs } from "../../apis/collection";
 
 
 const Home = () => {
-  const sliderImgs = useSelector(({ sliderState }) => sliderState.currentSlider.payload.sliderImgs);
-  const headerImg = useSelector(({ sliderState }) => sliderState.currentSlider.payload.headerImg);
+  const sliderImgs = useSelector(({ sliderState }) => sliderState.sliderImgs);
+  const headerImg = useSelector(({ sliderState }) => sliderState.headerImg);
   const dispatch = useDispatch();
 
   useEffect(() => {

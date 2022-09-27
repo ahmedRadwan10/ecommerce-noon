@@ -4,16 +4,16 @@ import { removeSelectedCategory } from "../../redux/slices/categorySlice";
 import styles from "./CategoryOverview.module.css";
 
 const CategoryOverview = () => {
-    const categories = useSelector(state => state.categoryState.allCategories.payload);
-    const selectedCategory = useSelector(state => state.categoryState.selectedCategory.payload);
+    const categories = useSelector(({ categoryState }) => categoryState.allCategories);
+    const selectedCategory = useSelector(({ categoryState }) => categoryState.selectedCategory);
     const [visible, setVisibile] = useState(false);
     const categoryOverviewElement = useRef();
 
 
     const displaySubCategories = () => {
-        if (visible && selectedCategory[0].id <= 7) return categories.map(
+        if (visible && selectedCategory.id <= 7) return categories.map(
             (cat) => {
-                if (cat.id === selectedCategory[0].id) {
+                if (cat.id === selectedCategory.id) {
                     return cat.subCategories.map((sub) =>
                         <li key={sub}>{sub}</li>
                     )
@@ -23,9 +23,9 @@ const CategoryOverview = () => {
     }
 
     const displayTopBrands = () => {
-        if (visible && selectedCategory[0].id <= 7) return categories.map(
+        if (visible && selectedCategory.id <= 7) return categories.map(
             (cat) => {
-                if (cat.id === selectedCategory[0].id) {
+                if (cat.id === selectedCategory.id) {
                     return cat.topBrands.map((brandURL) =>
                         <img key={brandURL} src={brandURL} alt="Brand" />
                     )
@@ -35,10 +35,10 @@ const CategoryOverview = () => {
     }
 
     const displayPhotos = () => {
-        if (visible && selectedCategory[0].id <= 7) return (
+        if (visible && selectedCategory.id <= 7) return (
             <>
-                <img src={selectedCategory[0].photos[0]} alt="Category" />
-                <img src={selectedCategory[0].photos[1]} alt="Category" />
+                <img src={selectedCategory.photos[0]} alt="Category" />
+                <img src={selectedCategory.photos[1]} alt="Category" />
             </>
         );
     }
@@ -55,7 +55,7 @@ const CategoryOverview = () => {
     }
 
     useEffect(() => {
-        if (selectedCategory && selectedCategory[0].id <= 7) setVisibile(true);
+        if (selectedCategory && selectedCategory.id <= 7) setVisibile(true);
         else setVisibile(false)
     }, [selectedCategory])
 

@@ -5,7 +5,7 @@ import { removeSelectedCategory, selectCategory } from "../../redux/slices/categ
 import CategoryOverview from "./CategoryOverview";
 
 const CategoryNav = ({ styles }) => {
-    const categories = useSelector(state => state.categoryState.allCategories.payload);
+    const categories = useSelector(({ categoryState }) => categoryState.allCategories);
     const dispatch = useDispatch();
     const categoryList = useRef();
 
