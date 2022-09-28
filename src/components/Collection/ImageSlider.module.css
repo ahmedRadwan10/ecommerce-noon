@@ -42,11 +42,6 @@
     opacity: 0.5;
 } 
 
-.imgs_slider_container button img {
-    width: 25px;
-    height: 25px;
-}
-
 .imgs_slider_container button:first-of-type {
     left: 30px;
 }

@@ -1,8 +1,8 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useRef } from 'react';
 import styles from "./ProductsOverview.module.css";
 
 const ProductsOverview = ({ title, products }) => {
+    const productsContainer = useRef();
 
     const displayProducts = () => {
         return products.map(product => 
@@ -30,13 +30,27 @@ const ProductsOverview = ({ title, products }) => {
         );
     }
 
+    const scrollProductsToLeft = () => {
+        productsContainer.current.scrollLeft -= 300;
+    }
+
+    const scrollProductsToRight = () => {
+        productsContainer.current.scrollLeft += 300;
+    }
+
     if (products) return (
         <div className={styles.main_container}>
+            <button className={styles.scroll_btn} onClick={scrollProductsToLeft}>
+                <i className="fa-solid fa-chevron-left"></i>
+            </button>
+            <button className={styles.scroll_btn} onClick={scrollProductsToRight}>
+                <i className="fa-solid fa-chevron-right"></i>
+            </button>
             <div className={styles.header}>
                 <h2>{title}</h2>
                 <button>SHOP NOW</button>
             </div>
-            <div className={styles.products_container}>
+            <div ref={productsContainer} className={styles.products_container}>
                 { displayProducts() }
             </div>
         </div>
