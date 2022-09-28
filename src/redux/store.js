@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import categoryReducer from './slices/categorySlice';
-import sliderReducer from './slices/sliderSlice';
+import collectionReducer from './slices/collectionSlice';
 import locationReducer from './slices/locationSlice';
 
 export const store = configureStore({
     reducer: {
         categoryState: categoryReducer,
-        sliderState: sliderReducer,
+        collectionState: collectionReducer,
         locationState: locationReducer
       },
 });

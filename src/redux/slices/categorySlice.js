@@ -12,12 +12,12 @@ export const categorySlice = createSlice({
     fetchCategories: (state, action) => {
           state.allCategories = action.payload;
     },
-        selectCategory: (state, action) => {
-          state.selectedCategory = action.payload[0];
+      selectCategory: (state, action) => {
+      state.selectedCategory = action.payload[0];
     },
     removeSelectedCategory: (state) => {
           state.selectedCategory = {};
-    }
+        }
   }
 });
 

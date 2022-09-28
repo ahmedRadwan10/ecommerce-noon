@@ -219,17 +219,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     "homeSlider" : {
         "headerImg" : "https://f.nooncdn.com/cms/pages/20220915/db40b276b580ce6c408b1a1b90dec594/en_dk_eg-toggle-01.png",
         "sliderImgs" : [
@@ -241,9 +230,82 @@
             "https://f.nooncdn.com/cms/pages/20220925/0b75682cc0ac6762d4dccae74df159cb/en_dk_eg-hero-banner-01.gif",
             "https://f.nooncdn.com/cms/pages/20220919/d863a9c5e67e5090f17a99051347c77e/plp/en_dk_eg-hero-banner-01.png",
             "https://f.nooncdn.com/cms/pages/20220922/d24420e746f50d6660cf1fe7a16ede64/en_dk_eg-banner-01.png",
-            "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_slider-01.png"
+            "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_slider-01.png",
+            "https://f.nooncdn.com/cms/pages/20220928/0001b4b46fa850bf409a192d0a50cec4/en_dk_eg-hero-banner-01.png",
+            "https://f.nooncdn.com/cms/pages/20220927/5d8f45e1f942637c54ac8d4cdf55ba41/en_dk_eg-hero-banner-01.png"
         ]
-    }
+    },
+
+    "homeQuickReach": [
+        "https://f.nooncdn.com/cms/pages/20220927/2daca4fcc41833001db92e2c7335bd30/en_CBs-03.png",
+        "https://f.nooncdn.com/cms/pages/20220808/dbafa823cd0bee6c974e0246f5fc15c9/en_CBs-01.png",
+        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_category-01.png",
+        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_category-02.png",
+        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_category-03.png",
+        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_category-04.png",
+        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_category-05.png",
+        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_category-06.png",
+        "https://f.nooncdn.com/cms/pages/20220926/7b64e730d7a97a2641d6bbf7e6b0ceab/en_CBs-02.png",
+        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_category-09.png",
+        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_category-10.png",
+        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_category-11.png",
+        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_category-12.png",
+        "https://f.nooncdn.com/cms/pages/20220928/940a2bcf088f4456700407cd7a551f3f/en_CBs-15.png",
+        "https://f.nooncdn.com/cms/pages/20220928/940a2bcf088f4456700407cd7a551f3f/en_CBs-09.png",
+        "https://f.nooncdn.com/cms/pages/20220928/940a2bcf088f4456700407cd7a551f3f/en_CBs-10.png",
+        "https://f.nooncdn.com/cms/pages/20220928/940a2bcf088f4456700407cd7a551f3f/en_CBs-14.png",
+        "https://f.nooncdn.com/cms/pages/20220928/940a2bcf088f4456700407cd7a551f3f/en_CBs-03.png",
+        "https://f.nooncdn.com/cms/pages/20220928/940a2bcf088f4456700407cd7a551f3f/en_CBs-04.png"
+    ],
+
+
+    "hotDealsProducts" : [
+        {
+            "id": 1,
+            "img": "https://f.nooncdn.com/products/tr:n-t_240/v1637341091/N47233794A_1.jpg",
+            "title": "realme C11 (2021) Dual SIM Cool Blue 2GB RAM 32GB",
+            "newPrice": 3030,
+            "oldPrice": 4400,
+            "rating": 4.6,
+            "reviewsNumber": 48
+        },
+        {
+            "id": 2,
+            "img": "https://f.nooncdn.com/products/tr:n-t_240/v1633343876/N42342017A_1.jpg",
+            "title": "Sony PlayStation 5 Console (Disc Version) With Extra W",
+            "newPrice": 19999,
+            "oldPrice": 21000,
+            "rating": 4.7,
+            "reviewsNumber": 430
+        },
+        {
+            "id": 3,
+            "img": "https://f.nooncdn.com/products/tr:n-t_240/v1646828734/N52486085A_1.jpg",
+            "title": "Oraimo TWS Riff OEB-E02D Bluetooth 5.0 Earbuds Buil",
+            "newPrice": 699,
+            "oldPrice": 750,
+            "rating": 3.9,
+            "reviewsNumber": 16
+        },
+        {
+            "id": 4,
+            "img": "https://f.nooncdn.com/products/tr:n-t_240/pzsku/ZD60096264362BBA5C0F6Z/45/_/1663066021/c01cb8e0-81da-4921-92c5-8ecab7c30eec.jpg",
+            "title": "Pantum P2509W Mono Laser Single Function Print",
+            "newPrice": 3333,
+            "oldPrice": 4000,
+            "rating": 0,
+            "reviewsNumber": 0
+        },
+        {
+            "id": 5,
+            "img": "https://f.nooncdn.com/products/tr:n-t_240/v1655124003/N36660157A_1.jpg",
+            "title": "Samsung 43-Inch Full HD Smart TV With Built In Rec",
+            "newPrice": 6299,
+            "oldPrice": 0,
+            "rating": 4.6,
+            "reviewsNumber": 69
+        }
+    ]
 
 
 }

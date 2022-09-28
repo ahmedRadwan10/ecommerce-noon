@@ -1,0 +1,15 @@
+
+.main_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    padding: 15px;
+}
+
+.main_container img {
+    width: 120px;
+    margin: 0 10px;
+    cursor: pointer;
+}

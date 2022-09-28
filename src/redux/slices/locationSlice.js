@@ -15,8 +15,8 @@ export const locationSlice = createSlice({
       state.address = action.payload;
     },
     updateLocationLatlng: (state, action) => {
-      state.lat = action.payload.lat;
-      state.lng = action.payload.lng;
+      state.lat = Number(action.payload.lat.toFixed(6));
+      state.lng = Number(action.payload.lng.toFixed(6));
     },
     confirmAddressChanged: (state) => {
       state.addressChanged = true;

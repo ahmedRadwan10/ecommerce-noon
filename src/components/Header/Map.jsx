@@ -14,7 +14,7 @@ const Map = ({ isShown, hideMap }) => {
   const dispatch = useDispatch();
  
   const getReverseGeocodingData = async () => {
-    const response = await fetch(`https://geocode.arcgis.com/arcgis/rest/services/World/Geocodeserver/reverseGeocode?f=pjson&featureTypes=&location=${lat},${lng}`);
+    const response = await fetch(`https://geocode.arcgis.com/arcgis/rest/services/World/Geocodeserver/reverseGeocode?f=pjson&featureTypes=&location=${lat + 1.172822},${lng - 1.185721}`);
     const data = await response.json();
     dispatch(updateLocationAddress(data.address.Match_addr));
   }

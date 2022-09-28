@@ -64,13 +64,6 @@
     transition: 0.3s all ease;
 }
 
-.location_text:lang(ar) {
-    direction: rtl;
-}
-
-.location_text:hover {
-    overflow: visible;
-}
 
 /* ... Search Bar... */
 
