@@ -96,7 +96,12 @@
     color: var(--dark-gray);
     font-family: var(--ar-font);
     cursor: pointer;
+    transition: 0.3s all ease;
 }
+
+.language:hover {
+    opacity: 0.7;
+} 
 
 .divider {
     color: var(--light-gray);
@@ -107,21 +112,18 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    color: var(--dark-gray);
+    transition: 0.3s all ease;
+}
+
+.flex_container:hover {
+    opacity: 0.7;
 }
 
 .icon_text {
     font-size: 13px;
     font-weight: 600;
-    color: var(--dark-gray);
     margin-right: 5px;
-}
-
-.user_icon {
-   height: 18px; 
-}
-
-.cart_icon {
-   height: 23px; 
 }
 
 /* ...Media Queries... */

@@ -1,0 +1,27 @@
+
+.main_container {
+    height: 22vw;
+    padding: 60px 30px 30px;
+    background-color: var(--bg04);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 15px;
+    position: relative;
+}
+
+.main_container img:not(.header_img) {
+    width: 15vw;
+    height: 15vw;
+    cursor: pointer;
+}
+
+
+.main_container .header_img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    width: 100%;
+    cursor: pointer;
+}

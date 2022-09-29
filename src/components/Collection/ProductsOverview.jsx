@@ -4,7 +4,27 @@ import styles from "./ProductsOverview.module.css";
 const ProductsOverview = ({ title, products }) => {
     const productsContainer = useRef();
 
-    const displayProducts = () => {
+    const renderProductOldPrice = (product) => {
+        return (
+                 <div className={styles.old_price_container}>
+                    EGP
+                    <span>{product.oldPrice.toFixed(2)}</span>
+                    <span>{Math.floor(100 - (product.newPrice / product.oldPrice) * 100)}% OFF</span>
+                </div>
+        );
+    }
+
+    const renderProductRating = (product) => {
+        return (
+            <div>
+                <i className="fa-solid fa-star fa-sm"></i>
+                <span>{product.rating}</span>
+                <span>({product.reviewsNumber})</span>
+            </div>
+        );
+    }
+
+    const renderProducts = () => {
         return products.map(product => 
             <div key={product.id} className={styles.product_container}>
                 <img src={product.img} alt="Product" />
@@ -13,18 +33,10 @@ const ProductsOverview = ({ title, products }) => {
                     EGP
                     <span>{product.newPrice.toFixed(2)}</span>
                 </div>
-                { product.oldPrice ? <div className={styles.old_price_container}>
-                    EGP
-                    <span>{product.oldPrice.toFixed(2)}</span>
-                    <span>{Math.floor(100 - (product.newPrice / product.oldPrice) * 100)}% OFF</span>
-                </div> : ""}
+                { product.oldPrice ? renderProductOldPrice(product) : ""}
                 <div className={styles.product_footer}>
                     <img src="https://f.nooncdn.com/s/app/com/noon/images/fulfilment_express_v2-en.svg" alt="Express" />
-                    {product.reviewsNumber ? <div>
-                        <i className="fa-solid fa-star fa-sm"></i>
-                        <span>{product.rating}</span>
-                        <span>({product.reviewsNumber})</span>
-                    </div>: ""}
+                    { product.reviewsNumber ? renderProductRating(product) : "" }
                 </div>
             </div>
         );
@@ -51,7 +63,7 @@ const ProductsOverview = ({ title, products }) => {
                 <button>SHOP NOW</button>
             </div>
             <div ref={productsContainer} className={styles.products_container}>
-                { displayProducts() }
+                { renderProducts() }
             </div>
         </div>
     );

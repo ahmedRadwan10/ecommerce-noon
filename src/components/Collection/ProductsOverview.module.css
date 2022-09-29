@@ -61,12 +61,20 @@
 
 .main_container .product_container {
     height: 470px;
+    width: 250px;
     position: relative;
     cursor: pointer;
 }
 
+.main_container .product_container img:first-of-type {
+    width: 100%;
+}
+
 .main_container .product_container p {
-    width: 200px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     font-weight: 300;
     font-size: 14px;
 }

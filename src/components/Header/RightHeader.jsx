@@ -8,12 +8,12 @@ const RightHeader = ({ styles }) => {
                 <span className={styles.divider}>|</span>
                 <div className={styles.flex_container}>
                     <h3 className={styles.icon_text}>Sign In</h3>
-                    <img className={styles.user_icon} src="https://f.nooncdn.com/s/app/com/noon/icons/user_thin.svg" alt="User" />
+                    <i className="fas fa-user"></i>
                 </div>
                 <span className={styles.divider}>|</span>
                 <div className={styles.flex_container}>
                     <h3 className={styles.icon_text}>Cart</h3>
-                    <img className={styles.cart_icon} src="https://f.nooncdn.com/s/app/com/noon/icons/cart.svg" alt="Cart" />
+                    <i className="fas fa-shopping-cart"></i>
                 </div>
             </div>
         </>

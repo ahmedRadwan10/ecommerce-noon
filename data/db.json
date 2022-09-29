@@ -304,8 +304,60 @@
             "oldPrice": 0,
             "rating": 4.6,
             "reviewsNumber": 69
+        },
+        {
+            "id": 6,
+            "img": "https://f.nooncdn.com/products/tr:n-t_240/v1663250831/N31910036A_1.jpg",
+            "title": "GoPro MAX - Waterproof 360 + Camera With Touch Screen Spherical 5.6K30 H",
+            "newPrice": 10776,
+            "oldPrice": 22200,
+            "rating": 4.3,
+            "reviewsNumber": 3
+        },
+        {
+            "id": 7,
+            "img": "https://f.nooncdn.com/products/tr:n-t_240/v1653304140/N51220172A_1.jpg",
+            "title": "Apple Watch Series 7 GPS 45mm Aluminium Case With Sport Band Abys",
+            "newPrice": 9950,
+            "oldPrice": 11550,
+            "rating": 4.7,
+            "reviewsNumber": 132
+        },
+        {
+            "id": 8,
+            "img": "https://f.nooncdn.com/products/tr:n-t_240/v1654846262/N53004804A_1.jpg",
+            "title": "Lenovo IDEAPAD GAMING 3 15ACH6 with 15.6 FHD IPS RYZEN 7 AMD-5800",
+            "newPrice": 23999,
+            "oldPrice": 26999,
+            "rating": 4.0,
+            "reviewsNumber": 1
+        },
+        {
+            "id": 9,
+            "img": "https://f.nooncdn.com/products/tr:n-t_240/v1647344312/N11411481A_1.jpg",
+            "title": "Logitech G300s Wired Gaming Mouse, 2,500 DPI, RGB, Lightweight, 9 Progra",
+            "newPrice": 299,
+            "oldPrice": 350,
+            "rating": 4.8,
+            "reviewsNumber": 92
         }
-    ]
+    ],
+
+    "mobileDeals" : [
+
+    ],
+
+    "electronicsCards": {
+        "headerImg": "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_title-07.png",
+        "cardsImgs": [
+            "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_cat-01.png",
+            "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_cat-02.png",
+            "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_cat-03.png",
+            "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_cat-04.png",
+            "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_cat-05.png",
+            "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_cat-06.png"
+        ]
+    }
 
 
 }

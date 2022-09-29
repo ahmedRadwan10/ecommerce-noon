@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./ImageSlider.module.css";
 
-const ImageSlider = ({ sliderImgs, headerImg }) => {
+const ImageSlider = ({ slider }) => {
     const [sliderIsAutoplay, setAutoplay] = useState(true);
     const [currentPaginationIndex, setIndex] = useState(0);
     const [sliderImgsCount, setCount] = useState(0);
@@ -9,7 +9,7 @@ const ImageSlider = ({ sliderImgs, headerImg }) => {
     const paginationElement = useRef();
 
     const getNumberOfSliderImgs = () => {
-        if (sliderImgs) setCount(sliderImgs.length);
+        if (slider.sliderImgs) setCount(slider.sliderImgs.length);
     }
     
     const scrollImgsToLeft = () => {
@@ -42,21 +42,21 @@ const ImageSlider = ({ sliderImgs, headerImg }) => {
         updatePagination(currentPaginationIndex + 1);
     }
 
-    const displaySliderImgs = () => {
-        if (sliderImgs) return sliderImgs.map(img => <img key={img} src={img} alt="Banner" />);
+    const renderSliderImgs = () => {
+        if (slider.sliderImgs) return slider.sliderImgs.map(img => <img key={img} src={img} alt="Banner" />);
     }
 
-    const displayHeaderImg = () => {
-        if (sliderImgs) return <img src={headerImg} alt="Toggle" />;
+    const renderHeaderImg = () => {
+        if (slider) return <img src={slider.headerImg} alt="Toggle" />;
     }
     
-    const displayPagination = () => {
-        if (sliderImgs) return sliderImgs.map(img => <span className={styles.pagination_span} key={img}></span>);
+    const renderPagination = () => {
+        if (slider.sliderImgs) return slider.sliderImgs.map(img => <span className={styles.pagination_span} key={img}></span>);
     }
 
     const updatePagination = (index = 0) => {
         let spansArr = [...paginationElement.current.children];
-        if (sliderImgs) {
+        if (slider) {
             spansArr.forEach((span) => {
                 span.style.backgroundColor = "var(--bg03)";
             });
@@ -92,25 +92,25 @@ const ImageSlider = ({ sliderImgs, headerImg }) => {
     
     useEffect(() => {
         getNumberOfSliderImgs();
-    }, [sliderImgs]);
+    }, [slider]);
 
     return (
         <div className={styles.main_container}>
             <div className={styles.header_img_container}>
-                { displayHeaderImg() }
+                { renderHeaderImg() }
             </div>
             <div className={styles.imgs_slider_container}>
                 <button onClick={scrollImgsToLeft}>
                     <i className="fa-solid fa-chevron-left"></i>
                 </button>
                 <div ref={imgsSliderElement} className={styles.imgs_slider}>
-                    { displaySliderImgs() }
+                    { renderSliderImgs() }
                 </div>
                 <button onClick={scrollImgsToRight}>
                     <i className="fa-solid fa-chevron-right"></i>
                 </button>
                 <div ref={paginationElement} className={styles.pagination}>
-                    { displayPagination() }
+                    { renderPagination() }
                 </div>
             </div>
         </div>
