@@ -12,7 +12,7 @@ function App() {
         <Header />
         <CategoryNav styles={styles} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/ecommerce-noon" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>
