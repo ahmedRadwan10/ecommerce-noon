@@ -2,10 +2,9 @@
 .main_container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     background-color: var(--white);
     padding: 15px;
+    overflow: hidden;
 }
 
 .main_container img {
