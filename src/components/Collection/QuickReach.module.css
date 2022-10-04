@@ -1,14 +1,16 @@
 
 .main_container {
+    min-height: 19vw;
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     background-color: var(--white);
     padding: 15px;
-    overflow: hidden;
 }
 
 .main_container img {
-    width: 120px;
+    width: 6vw;
     margin: 0 10px;
     cursor: pointer;
 }

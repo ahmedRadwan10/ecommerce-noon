@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import ImageSlider from "../../components/Collection/ImageSlider";
 import styles from "./Home.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getElectronicsCards, getHotDealsProducts, getQuickReachImgs, getSliderImgs } from "../../apis/collection";
 import QuickReach from "../Collection/QuickReach";
 import ProductsOverview from "../Collection/ProductsOverview";
 import Cards from "../Collection/Cards";
+import { getElectronicsCards, getHomeSlider, getHotDealsProducts, getQuickReach } from "../../apis/firebase";
+import Footer from "../Footer/Footer";
 
 
 const Home = () => {
@@ -16,10 +17,10 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    getSliderImgs(dispatch, 'homeSlider');
-    getQuickReachImgs(dispatch, 'homeQuickReach');
-    getHotDealsProducts(dispatch, 'hotDealsProducts');
-    getElectronicsCards(dispatch, 'electronicsCards');
+    getHomeSlider(dispatch);
+    getQuickReach(dispatch);
+    getHotDealsProducts(dispatch);
+    getElectronicsCards(dispatch);
   }, []);
 
     return (
@@ -28,7 +29,7 @@ const Home = () => {
           <QuickReach imgs={quickReachImgs} />
           <ProductsOverview title={"Hot deals"} products={hotDealsProducts} />
           <Cards cards={electronicsCards} />
-          <ProductsOverview title={"Mobile deals"} products={[]} />
+          <Footer />
         </div>
     );
 };

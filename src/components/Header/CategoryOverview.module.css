@@ -6,7 +6,7 @@
     left: 0;
     right: 0;
     background: var(--overlay);
-    z-index: 999;
+    z-index: 9;
 }
 
 .category_overview {

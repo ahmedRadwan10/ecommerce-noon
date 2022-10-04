@@ -19,12 +19,8 @@
 
 .list_container {
     scroll-behavior: smooth;
-    overflow-x: scroll;
+    overflow: hidden;
     position: relative;
-}
-
-.list_container::-webkit-scrollbar {
-    display: none;
 }
 
 .list_container button {
@@ -64,7 +60,8 @@
 /* ...Media Queries... */
 
 @media screen and (max-width: 1285px) {
-    .list_container button {
+
+    .list_container:hover button {
         width: 30px;
         height: 30px;
         position: fixed;

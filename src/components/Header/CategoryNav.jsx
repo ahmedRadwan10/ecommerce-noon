@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getCategories } from "../../apis/categories";
+import { getCategories } from "../../apis/firebase";
 import { removeSelectedCategory, selectCategory } from "../../redux/slices/categorySlice";
 import CategoryOverview from "./CategoryOverview";
 

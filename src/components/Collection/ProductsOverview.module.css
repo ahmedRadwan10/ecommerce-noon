@@ -5,6 +5,7 @@
     background-color: var(--white);
     padding: 30px;
     position: relative;
+    min-height: 32vw;
 }
 
 .main_container .scroll_btn {

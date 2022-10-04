@@ -12,6 +12,7 @@
 
 .imgs_slider_container {
     position: relative;
+    height: 19vw;
 }
 
 .imgs_slider_container .imgs_slider {

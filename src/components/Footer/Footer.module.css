@@ -1,0 +1,76 @@
+
+/* ....Contact.... */
+
+.main_container {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.contact_container {
+    padding: 30px 40px;
+    background-color: #f7f7fa;
+    color: #404553;
+    border-top: 2px solid #4045531f;
+    border-bottom: 1px solid #4045531f;
+}
+
+.contact_header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact_header_info_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact_header_info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact_header_info_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_header_info div:first-of-type  {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ....Categories.... */
+
+.cats_main_container {
+    background-color: var(--white);
+    padding: 30px 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cats_main_container h4 {
+    color: #404553;
+    font-size: 0.8vw;
+    margin-bottom: 15px;
+}
+
+.cats_main_container ul {
+    list-style: none;
+}
+
+.cats_main_container ul li {
+    color: #404553;
+    font-size: 0.7vw;
+    margin: 5px 0;
+    cursor: pointer;
+}

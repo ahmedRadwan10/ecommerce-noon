@@ -6,6 +6,7 @@
     left: 0;
     right: 0;
     background-color: var(--overlay);
+    z-index: 10;
 }
 
 .map_modal_container {
