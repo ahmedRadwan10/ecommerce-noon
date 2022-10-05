@@ -1,6 +1,3 @@
-import { CircularProgress } from '@mui/material';
-import React, { useRef } from 'react';
-import { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateLocationAddress } from '../../redux/slices/locationSlice';

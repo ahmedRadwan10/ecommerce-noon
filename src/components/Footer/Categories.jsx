@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import styles from './Footer.module.css';
 
@@ -12,7 +11,7 @@ const Categories = () => {
                     <h4>{cat.title.toUpperCase()}</h4>
                     <ul>
                         {cat.subCategories.map(
-                            subCat => <li>{ subCat }</li>
+                            subCat => <li key={subCat}>{ subCat }</li>
                         ) }
                     </ul>
                 </div> : ""

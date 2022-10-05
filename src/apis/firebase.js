@@ -1,5 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { fetchCategories } from "../redux/slices/categorySlice";
 import { fetchElectronicsCards, fetchHotDealsProducts, fetchQuickReachImgs, fetchSlider } from "../redux/slices/collectionSlice";
 
