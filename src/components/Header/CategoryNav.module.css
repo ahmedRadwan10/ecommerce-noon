@@ -48,10 +48,6 @@
     cursor: pointer;
 }
 
-.category_list li:last-of-type {
-    color: var(--red);
-}
-
 .category_list li:hover, .all_categories:hover {
     background-color: white;
     box-shadow: var(--shadow01);

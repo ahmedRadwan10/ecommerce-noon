@@ -4,6 +4,7 @@ import './App.css';
 import CategoryNav from '../Header/CategoryNav';
 import styles from '../Header/CategoryNav.module.css';
 import Home from '../Home/Home';
+import Footer from '../Footer/Footer';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
         <Header />
         <CategoryNav styles={styles} />
         <Routes>
-          <Route path="/ecommerce-noon" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

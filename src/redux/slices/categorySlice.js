@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-      allCategories: [],
+      categories: [],
       selectedCategory: {},
 }
 
@@ -10,10 +10,10 @@ export const categorySlice = createSlice({
   initialState,
   reducers: {
     fetchCategories: (state, action) => {
-          state.allCategories = action.payload;
+      state.categories = action.payload;
     },
     selectCategory: (state, action) => {
-      state.selectedCategory = action.payload[0];
+      state.selectedCategory = action.payload;
     },
     removeSelectedCategory: (state) => {
           state.selectedCategory = {};

@@ -97,18 +97,24 @@ const ImageSlider = ({ slider }) => {
     return (
         <div className={styles.main_container}>
             <div className={styles.header_img_container}>
-                { renderHeaderImg() }
+                { slider.headerImg ? renderHeaderImg() : "" }
             </div>
             <div className={styles.imgs_slider_container}>
-                <button onClick={scrollImgsToLeft}>
-                    <i className="fa-solid fa-chevron-left"></i>
-                </button>
-                <div ref={imgsSliderElement} className={styles.imgs_slider}>
-                    { renderSliderImgs() }
-                </div>
-                <button onClick={scrollImgsToRight}>
-                    <i className="fa-solid fa-chevron-right"></i>
-                </button>
+                { slider.sliderImgs ?
+                    (
+                        <>
+                             <button onClick={scrollImgsToLeft}>
+                                <i className="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <div ref={imgsSliderElement} className={styles.imgs_slider}>
+                                { renderSliderImgs() }
+                            </div>
+                            <button onClick={scrollImgsToRight}>
+                                <i className="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </>
+                    )
+                : "" }
                 <div ref={paginationElement} className={styles.pagination}>
                     { renderPagination() }
                 </div>

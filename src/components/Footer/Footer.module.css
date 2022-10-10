@@ -1,4 +1,11 @@
 
+
+.footer_container {
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+}
+
 /* ....Contact.... */
 
 .main_container {
@@ -39,8 +46,8 @@
 }
 
 .contact_header_info div:first-of-type  {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: var(--white);
     display: flex;
@@ -60,7 +67,7 @@
 
 .cats_main_container h4 {
     color: #404553;
-    font-size: 0.8vw;
+    font-size: 1rem;
     margin-bottom: 15px;
 }
 
@@ -70,7 +77,79 @@
 
 .cats_main_container ul li {
     color: #404553;
-    font-size: 0.7vw;
+    font-size: 14px;
     margin: 5px 0;
     cursor: pointer;
 }
+
+/* ....Social Info.... */
+
+.social_info_container {
+    background-color: var(--white);
+    width: 100%;
+    height: 80px;
+    padding: 0 150px;
+    color: #404553;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apps_container {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.social_container {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.socials {
+    display: flex;
+    column-gap: 5px;
+}
+
+img {
+    cursor: pointer;
+}
+
+/* ....More Info.... */
+
+.more_info_container {
+    padding: 0 40px;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.more_info_container p {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.paymnets img {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+}
+
+.more_links {
+    list-style: none;
+    display: flex;
+}
+
+.more_links li {
+    font-weight: 300;
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+

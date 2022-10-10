@@ -19,17 +19,19 @@
     display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
 }
 
 .imgs_slider_container .imgs_slider img {
     min-width: 100%;
     object-fit: cover;
     cursor: pointer;
+    scroll-snap-align: center;
 }
 
 .imgs_slider_container button {
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    height: 3vw;
     border: none;
     outline: none;
     border-radius: 50%;
@@ -43,6 +45,10 @@
     opacity: 0.5;
 } 
 
+.imgs_slider_container button  i {
+    font-size: 1vw;
+}
+
 .imgs_slider_container button:first-of-type {
     left: 30px;
 }
@@ -55,7 +61,7 @@
 .imgs_slider_container .pagination {
     position: absolute;
     left: 50%;
-    bottom: 15px;
+    bottom: 10px;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -67,7 +73,7 @@
     display: block;
     background-color: var(--bg03);
     width: 30px;
-    height: 5px;
+    height: 3px;
     border-radius: 20px;
     transition: 0.3s all ease;
 }

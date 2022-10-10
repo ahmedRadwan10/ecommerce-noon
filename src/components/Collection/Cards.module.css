@@ -1,5 +1,6 @@
 
 .main_container {
+    margin-top: 40px;
     height: 22vw;
     padding: 60px 30px 30px;
     background-color: var(--bg04);

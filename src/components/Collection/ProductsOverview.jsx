@@ -1,15 +1,16 @@
 import React, { useRef } from 'react';
+import { useEffect } from 'react';
 import styles from "./ProductsOverview.module.css";
 
-const ProductsOverview = ({ title, products }) => {
+const ProductsOverview = ({ deal }) => {
     const productsContainer = useRef();
 
     const renderProductOldPrice = (product) => {
         return (
-                 <div className={styles.old_price_container}>
+            <div className={styles.old_price_container}>
                     EGP
-                    <span>{product.oldPrice.toFixed(2)}</span>
-                    <span>{Math.floor(100 - (product.newPrice / product.oldPrice) * 100)}% OFF</span>
+                    <span>{product.old_price.toFixed(2)}</span>
+                    <span>{Math.floor(100 - (product.new_price / product.old_price) * 100)}% OFF</span>
                 </div>
         );
     }
@@ -19,24 +20,24 @@ const ProductsOverview = ({ title, products }) => {
             <div>
                 <i className="fa-solid fa-star fa-sm"></i>
                 <span>{product.rating}</span>
-                <span>({product.reviewsNumber})</span>
+                <span>({parseInt(product.reviews_number)})</span>
             </div>
         );
     }
 
     const renderProducts = () => {
-        return products.map(product => 
-            <div key={product.id} className={styles.product_container}>
-                <img src={product.img} alt="Product" />
+           if(deal.products) return deal.products.map(product => 
+            <div key={product["web-scraper-order"]} className={styles.product_container}>
+                <img src={product["img-src"].replace(/tr:n-t_80/i, "tr:n-t_240")} alt={product.title} />
                 <p title={product.title}>{product.title}</p>
                 <div className={styles.new_price_container}>
                     EGP
-                    <span>{product.newPrice.toFixed(2)}</span>
+                    <span>{product.new_price.toFixed(2)}</span>
                 </div>
-                { product.oldPrice ? renderProductOldPrice(product) : ""}
+                { product.old_price ? renderProductOldPrice(product) : ""}
                 <div className={styles.product_footer}>
                     <img src="https://f.nooncdn.com/s/app/com/noon/images/fulfilment_express_v2-en.svg" alt="Express" />
-                    { product.reviewsNumber ? renderProductRating(product) : "" }
+                    { product.reviews_number ? renderProductRating(product) : "" }
                 </div>
             </div>
         );
@@ -50,7 +51,7 @@ const ProductsOverview = ({ title, products }) => {
         productsContainer.current.scrollLeft += 300;
     }
 
-    if (products) return (
+    if (deal) return (
         <div className={styles.main_container}>
             <button className={styles.scroll_btn} onClick={scrollProductsToLeft}>
                 <i className="fa-solid fa-chevron-left"></i>
@@ -59,7 +60,7 @@ const ProductsOverview = ({ title, products }) => {
                 <i className="fa-solid fa-chevron-right"></i>
             </button>
             <div className={styles.header}>
-                <h2>{title}</h2>
+                <h2>{deal.title}</h2>
                 <button>SHOP NOW</button>
             </div>
             <div ref={productsContainer} className={styles.products_container}>

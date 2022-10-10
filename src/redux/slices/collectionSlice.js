@@ -3,8 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   slider: {},
   quickReachImgs: [],
-  hotDealsProducts: [],
-  mobileDealsProducts: [],
+  deals: [],
   electronicsCards: []
 };
 
@@ -18,8 +17,8 @@ export const collectionSlice = createSlice({
     fetchQuickReachImgs: (state, action) => {
       state.quickReachImgs = action.payload;
     },
-    fetchHotDealsProducts: (state, action) => {
-      state.hotDealsProducts = action.payload;
+    fetchDeal: (state, action) => {
+      state.deals.push(action.payload);
     },
     fetchElectronicsCards: (state, action) => {
       state.electronicsCards = action.payload;
@@ -27,6 +26,5 @@ export const collectionSlice = createSlice({
   }
 });
 
-export const { fetchSlider, fetchQuickReachImgs, fetchHotDealsProducts, fetchElectronicsCards } = collectionSlice.actions;
-
+export const { fetchSlider, fetchQuickReachImgs, fetchDeal, fetchElectronicsCards } = collectionSlice.actions;
 export default collectionSlice.reducer;

@@ -1,41 +1,31 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { removeSelectedCategory } from "../../redux/slices/categorySlice";
 import styles from "./CategoryOverview.module.css";
 
 const CategoryOverview = () => {
-    const categories = useSelector(({ categoryState }) => categoryState.allCategories);
     const selectedCategory = useSelector(({ categoryState }) => categoryState.selectedCategory);
-    const [visible, setVisibile] = useState(false);
+    const dispatch = useDispatch();
     const categoryOverviewElement = useRef();
 
 
     const displaySubCategories = () => {
-        if (visible && selectedCategory.order <= 7) return categories.map(
-            (cat) => {
-                if (cat.order === selectedCategory.order) {
-                    return cat.subCategories.map((sub) =>
-                        <li key={sub}>{sub}</li>
-                    )
-                }
-            }
-        );
+        if (selectedCategory.id) {
+            let subCategoriesObj = selectedCategory.__collections__.subCategories;
+            return Object.keys(subCategoriesObj).map(subKey => <Link to={`/${subCategoriesObj[subKey].title}`} key={subKey}><li>{subCategoriesObj[subKey].title}</li></Link>);
+        } 
     }
 
     const displayTopBrands = () => {
-        if (visible && selectedCategory.order <= 7) return categories.map(
-            (cat) => {
-                if (cat.order === selectedCategory.order) {
-                    return cat.topBrands.map((brandURL) =>
-                        <img key={brandURL} src={brandURL} alt="Brand" />
-                    )
-                }
-            }
-        );
+        if (selectedCategory.id) {
+            let brandsObj = selectedCategory.__collections__.brands;
+            return Object.keys(brandsObj).map(brandKey => <img key={brandKey} src={brandsObj[brandKey].img} alt={brandsObj[brandKey].name} />);
+        }
     }
 
     const displayPhotos = () => {
-        if (visible && selectedCategory.order <= 7) return (
+        if (selectedCategory.photos) return (
             <>
                 <img src={selectedCategory.photos[0]} alt="Category" />
                 <img src={selectedCategory.photos[1]} alt="Category" />
@@ -49,18 +39,17 @@ const CategoryOverview = () => {
         let currentMouseOverElement = elementsArray.at(-1);
 
         if (currentMouseOverElement !== categoryOverviewElement.current) {
-            setVisibile(false);
+            dispatch(removeSelectedCategory());
         }
     }
 
     useEffect(() => {
-        if (selectedCategory && selectedCategory.order <= 7) setVisibile(true);
-        else setVisibile(false)
+       
     }, [selectedCategory])
 
     return (
         <div className={styles.category_overview_container}
-            style={visible ? { display: 'flex' } : { display: 'none' }}
+            style={selectedCategory.id ? { display: 'flex' } : { display: 'none' }}
         >
             <div ref={categoryOverviewElement}
                 className={styles.category_overview}

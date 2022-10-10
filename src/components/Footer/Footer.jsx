@@ -5,10 +5,10 @@ import Categories from './Categories';
 
 const Footer = () => {
     return (
-        <>
+        <div className={styles.footer_container}>
             <Contact />
             <Categories />
-        </>
+        </div>
     );
 }
 

@@ -27,6 +27,11 @@
     margin-top: 15px;
 }
 
+a {
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
 .category_overview .sub_categories_list li {
     margin: 10px 0;
     font-size: 14px;

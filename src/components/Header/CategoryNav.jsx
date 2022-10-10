@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getCategories } from "../../apis/firebase";
-import { removeSelectedCategory, selectCategory } from "../../redux/slices/categorySlice";
+import { getCategories } from "../../apis/categories";
+import { selectCategory } from "../../redux/slices/categorySlice";
 import CategoryOverview from "./CategoryOverview";
 
 const CategoryNav = ({ styles }) => {
-    const categories = useSelector(({ categoryState }) => categoryState.allCategories);
+    const categories = useSelector(({ categoryState }) => categoryState.categories);
     const dispatch = useDispatch();
     const categoryList = useRef();
 
@@ -17,29 +17,31 @@ const CategoryNav = ({ styles }) => {
         categoryList.current.scrollLeft += 150;
     }
 
-    const selectCurrentCategory = (categoryID) => {
-        let currentCategory = categories.filter(
-            cat => cat.id === categoryID
-        );
-        dispatch(selectCategory(currentCategory));
+    const selectCurrentCategory = (categoryID, categoryOrder) => {
+        if (categoryOrder <= 5) {
+            categories.forEach((cat) => {
+                if (cat.id === categoryID) {
+                    dispatch(selectCategory(cat));
+                }
+            });
+        }
     }
 
     const handleOnMouseLeave = () => {
-        let elementsMouseOver = document.querySelectorAll(":hover" )
-        let elementsArray = [...elementsMouseOver];
-        let currentMouseOverElement = elementsArray.at(-1);
+        // let elementsMouseOver = document.querySelectorAll(":hover" )
+        // let elementsArray = [...elementsMouseOver];
+        // let currentMouseOverElement = elementsArray.at(-1);
 
-        // if (currentMouseOverElement !== ) {
-        //     dispatch(removeSelectedCategory());
-        // }
-
+        // // if (currentMouseOverElement !== ) {
+        // //     dispatch(removeSelectedCategory());
+        // // }
     }
     
     const displayCategories = () => {
         if (categories) return categories.map(
             (category) =>
                 <li key={category.id}
-                    onMouseOver={() => selectCurrentCategory(category.id)}
+                    onMouseOver={() => selectCurrentCategory(category.id, category.order)}
                     onMouseLeave={handleOnMouseLeave}
                 >
                     {category.title.toUpperCase()}
