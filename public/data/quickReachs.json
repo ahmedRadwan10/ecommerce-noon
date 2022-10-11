@@ -9,7 +9,7 @@
     "app": "firefoo"
   },
   "data": {
-    "W7gRWi02cDPOF2GCfMKj": {
+    "home": {
       "imgs": [
         "https://f.nooncdn.com/cms/pages/20220927/2daca4fcc41833001db92e2c7335bd30/en_CBs-03.png",
         "https://f.nooncdn.com/cms/pages/20220808/dbafa823cd0bee6c974e0246f5fc15c9/en_CBs-01.png",
@@ -30,8 +30,7 @@
         "https://f.nooncdn.com/cms/pages/20220928/940a2bcf088f4456700407cd7a551f3f/en_CBs-14.png",
         "https://f.nooncdn.com/cms/pages/20220928/940a2bcf088f4456700407cd7a551f3f/en_CBs-03.png",
         "https://f.nooncdn.com/cms/pages/20220928/940a2bcf088f4456700407cd7a551f3f/en_CBs-04.png"
-      ],
-      "__collections__": {}
+      ]
     }
   }
 }

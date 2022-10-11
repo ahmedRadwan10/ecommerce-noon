@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { resetAddressChanged } from "../../redux/slices/locationSlice";
 import Map from "./Map";
 
@@ -22,7 +23,7 @@ const LeftHeader = ({ styles }) => {
     return (
         <>
             <div className={styles.left_header}>
-                <img className={styles.logo} src="https://f.nooncdn.com/s/app/com/noon/design-system/logos/noon-logo-en.svg" alt="Logo" />
+                <Link to="/"><img className={styles.logo} src="https://f.nooncdn.com/s/app/com/noon/design-system/logos/noon-logo-en.svg" alt="Logo" /></Link>
                 <div className={styles.location_container}
                      onClick={showMap}
                 >

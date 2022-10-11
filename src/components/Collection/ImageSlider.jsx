@@ -9,7 +9,7 @@ const ImageSlider = ({ slider }) => {
     const paginationElement = useRef();
 
     const getNumberOfSliderImgs = () => {
-        if (slider.sliderImgs) setCount(slider.sliderImgs.length);
+        if (slider) setCount(slider.sliderImgs.length);
     }
     
     const scrollImgsToLeft = () => {
@@ -47,7 +47,7 @@ const ImageSlider = ({ slider }) => {
     }
 
     const renderHeaderImg = () => {
-        if (slider) return <img src={slider.headerImg} alt="Toggle" />;
+        if (slider.headerImg) return <img src={slider.headerImg} alt="Toggle" />;
     }
     
     const renderPagination = () => {
@@ -86,7 +86,7 @@ const ImageSlider = ({ slider }) => {
     }
 
     useEffect(() => {
-        if (sliderIsAutoplay && sliderImgsCount) playSlider();
+        if (sliderIsAutoplay && sliderImgsCount > 1) playSlider();
         return () => clearInterval(sliderInterval);
     }, [sliderIsAutoplay, sliderImgsCount, currentPaginationIndex]);
     
@@ -94,7 +94,7 @@ const ImageSlider = ({ slider }) => {
         getNumberOfSliderImgs();
     }, [slider]);
 
-    return (
+    if (slider) return (
         <div className={styles.main_container}>
             <div className={styles.header_img_container}>
                 { slider.headerImg ? renderHeaderImg() : "" }
@@ -103,15 +103,15 @@ const ImageSlider = ({ slider }) => {
                 { slider.sliderImgs ?
                     (
                         <>
-                             <button onClick={scrollImgsToLeft}>
+                            {sliderImgsCount > 1 ? <button onClick={scrollImgsToLeft}>
                                 <i className="fa-solid fa-chevron-left"></i>
-                            </button>
+                            </button> : ""}
                             <div ref={imgsSliderElement} className={styles.imgs_slider}>
                                 { renderSliderImgs() }
                             </div>
-                            <button onClick={scrollImgsToRight}>
+                            {sliderImgsCount > 1 ? <button onClick={scrollImgsToRight}>
                                 <i className="fa-solid fa-chevron-right"></i>
-                            </button>
+                            </button> : ""}
                         </>
                     )
                 : "" }

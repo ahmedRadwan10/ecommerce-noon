@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  slider: {},
-  quickReachImgs: [],
-  deals: [],
-  electronicsCards: []
+  sliders: {},
+  quickReachs: {},
+  deals: {},
+  cards: []
 };
 
 export const collectionSlice = createSlice({
@@ -12,19 +12,22 @@ export const collectionSlice = createSlice({
   initialState,
   reducers: {
     fetchSlider: (state, action) => {
-      state.slider = action.payload;
+      const pageName = action.payload.pageName;
+      state.sliders[pageName] = (({ headerImg, sliderImgs }) => ({ headerImg, sliderImgs }))(action.payload);
     },
-    fetchQuickReachImgs: (state, action) => {
-      state.quickReachImgs = action.payload;
+    fetchQuickReach: (state, action) => {
+      const pageName = action.payload.pageName;
+      state.quickReachs[pageName] = (({ imgs }) => ({ imgs }))(action.payload);
     },
     fetchDeal: (state, action) => {
-      state.deals.push(action.payload);
+      const dealTitle = action.payload.title;
+      state.deals[dealTitle] = (({ products }) => ({ products }))(action.payload);
     },
-    fetchElectronicsCards: (state, action) => {
-      state.electronicsCards = action.payload;
+    fetchCard: (state, action) => {
+      state.cards = action.payload;
     },
   }
 });
 
-export const { fetchSlider, fetchQuickReachImgs, fetchDeal, fetchElectronicsCards } = collectionSlice.actions;
+export const { fetchSlider, fetchQuickReach, fetchDeal, fetchCard } = collectionSlice.actions;
 export default collectionSlice.reducer;

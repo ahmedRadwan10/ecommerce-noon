@@ -52,6 +52,7 @@
 }
 
 .main_container .products_container {
+    height: 20vw;
     padding: 0 60px;
     display: flex;
     gap: 30px;
@@ -64,13 +65,13 @@
 }
 
 .main_container .product_container {
-    width: 300px;
+    min-width: 250px;
     position: relative;
     cursor: pointer;
 }
 
 .main_container .product_container img:first-of-type {
-    height: 70%;
+    height: 65%;
 }
 
 .main_container .product_container p {

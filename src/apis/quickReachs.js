@@ -1,7 +1,7 @@
-import { fetchQuickReachImgs } from "../redux/slices/collectionSlice";
+import { fetchQuickReach } from "../redux/slices/collectionSlice";
 
-export async function getQuickReachs(dispatch) {
+export async function getQuickReach(dispatch, pageName) {
     const response = await fetch('../data/quickReachs.json');
     const { data } = await response.json();
-    dispatch(fetchQuickReachImgs(data["W7gRWi02cDPOF2GCfMKj"].imgs));
+    dispatch(fetchQuickReach({ ...data[pageName], pageName }));
 }

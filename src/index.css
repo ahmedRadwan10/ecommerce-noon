@@ -42,3 +42,8 @@ body {
   font-family: var(--en-font);
   background-color: var(--bg03);
 }
+
+a {
+  display: flex;
+  align-items: center;
+}
