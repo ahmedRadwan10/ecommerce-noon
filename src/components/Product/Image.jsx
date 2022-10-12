@@ -1,0 +1,17 @@
+import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
+
+const Image = ({ imgSrc }) => {
+    const [imgIsOk, setIsOk] = useState(true);
+
+    const handleError = () => {
+        setIsOk(false);
+    }
+
+    return (
+        <img onError={handleError} src={imgIsOk ? imgSrc : "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTQuMjExMyAwLjc0MTk3MkMxMy4zNDAxIDAuMzkzNDgzIDEyLjM5OTQgMC4yMTkyMzggMTEuNDU4MyAwLjIxOTIzOEMxMC45MDEgMC4yMTkyMzggMTAuMzQzMyAwLjI4OTAzNyA5Ljc4NTY5IDAuMzkzNDgzTDcuNTM4MDkgNC4yNjE1MUM4LjQ2MTUzIDMuNzU2MzUgOS40ODk0MiAzLjUxMjMxIDEwLjU1MjUgMy41Mjk4OUMxMS4xOTcgMy41Mjk4OSAxMS44MjQ0IDMuNjE3IDEyLjQzNDMgMy43OTEyNUwxNC4yMTEzIDAuNzQxOTcyWiIgZmlsbD0iI0IyQjhDQSIvPjxwYXRoIGQ9Ik0wLjcwODAwOCAxMS4xNDM5QzAuNzA4MDA4IDE2LjcxOTcgNS40NDcyNiAyMS4wNTgyIDEwLjk3MDYgMjEuMDU4MkMxNi43NTU2IDIxLjA1ODIgMjEuNDI1IDE2LjM4ODUgMjEuNDI1IDEwLjcwODVDMjEuNDI1IDcuMzgwNTYgMTkuODIyMiA0LjQ1MzMgMTcuNDM1IDIuNTAxNzFMMTUuNjkyNSA1LjUxNjA4QzE3LjIyNTggNi44MjI5MiAxOC4xMTQ2IDguNzM5NjEgMTguMTE0NiAxMC43NjA3QzE4LjExNDYgMTQuNjI4OCAxNC45MDg0IDE3Ljc5OTggMTAuOTcwNiAxNy43OTk4QzcuMDMyNzggMTcuNzk5OCAzLjg0NDQxIDE0LjYxMTUgMy44NDQ0MSAxMC42NzM2QzMuODQ0NDEgMTAuNjczNiAzLjg0NDQxIDEwLjY3MzYgMy44NDQ0MSAxMC42NTYxQzMuODQ0NDEgMTAuMTg1OCAzLjg3OTA2IDkuNzE1MjggMy45NjYxOCA5LjI2MjA5TDAuNzA4MDA4IDExLjE0MzlaIiBmaWxsPSIjQjJCOENBIi8+PC9zdmc+"} />
+    );
+}
+
+export default Image;

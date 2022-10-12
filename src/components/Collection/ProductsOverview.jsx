@@ -1,11 +1,15 @@
 import React, { useRef } from 'react';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { selectProduct } from '../../redux/slices/categorySlice';
+import Image from '../Product/Image';
 import styles from "./ProductsOverview.module.css";
 
 const ProductsOverview = ({ data }) => {
     const productsContainer = useRef();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const renderProductOldPrice = (product) => {
         return (
@@ -33,9 +37,9 @@ const ProductsOverview = ({ data }) => {
                 return <div
                         key={product["web-scraper-order"]}
                         className={styles.product_container}
-                        onClick={() => navigate(`/${product.category.title}/${product.category.id}/${product.subCategory.title}/${product.subCategory.id}/${product.title}/${product.id}`)}
+                        onClick={() => handleProductOnClick(product)}
                         >
-                        <img src={product["img-src"].replace(/tr:n-t_80/i, "tr:n-t_400")} alt={product.title} />
+                        <Image imgSrc={product["img-src"].replace(/tr:n-t_80/i, "tr:n-t_400")} imgAlt={product.title} />
                         <p title={product.title}>{product.title}</p>
                         <div className={styles.new_price_container}>
                             EGP
@@ -49,6 +53,11 @@ const ProductsOverview = ({ data }) => {
                 </div>
            } 
         });
+    }
+
+    const handleProductOnClick = (product) => {
+        navigate(`/${product.category.title}/${product.subCategory.title}/${product.id}`)
+        dispatch(selectProduct(product));
     }
 
     const scrollProductsToLeft = () => {

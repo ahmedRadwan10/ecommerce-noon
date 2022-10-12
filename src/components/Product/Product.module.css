@@ -7,7 +7,7 @@
 .nav_container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .nav_container a {
@@ -32,19 +32,21 @@
 }
 
 .flex_container {
-    margin-top: 6%;
+    margin-top: 3%;
     width: 100%;
     display: flex;
     gap: 6%;
 }
 
-.flex_container img:first-of-type {
+.product_img {
     width: 100%;
+    min-width: 200px;
+    min-height: 400px;
 }
 
 .all_data_container {
     color: var(--dark-gray);
-    /* width: 30%; */
+    width: 30%;
 }
 
 .all_data_container h4:first-of-type {
@@ -56,24 +58,11 @@
     font-weight: 600;
 }
 
-.all_data_container p {
-}
-
-.all_data_container .flex {
+.model_container {
     margin: 15px 0;
     display: flex;
-    justify-content: space-between;
-}
-
-.sale_container {
-    padding: 0 5px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    display: flex;
     align-items: center;
-    color: var(--green);
-    background-color: #37ae042c;
-    border-radius: 2px;
+    gap: 20px;
 }
 
 .rating_container {
@@ -92,4 +81,192 @@
     color: var(--blue);
     text-decoration: underline;
 }
+
+.old_price {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.old_price span:nth-of-type(2) {
+    text-decoration: line-through;
+}
+
+.new_price {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.new_price span:nth-of-type(2) strong {
+    font-size: 1.4rem;
+}
+
+.saving {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.saving span:nth-of-type(2) {
+    text-decoration: line-through;
+}
+
+.sale_container {
+    padding: 0 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: var(--green);
+    background-color: #37ae042c;
+    border-radius: 2px;
+}
+
+.delivery_container {
+    margin: 60px 0;
+    padding: 15px;
+    width: 100%;
+    min-height: 60px;
+    border-radius: 3px;
+    background-color: #f5f7fe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.delivery_container p strong:nth-of-type(n + 2) {
+    text-decoration: underline;
+}
+
+.express {
+    width: 80px;
+    height: 20px;
+}
+
+.express img {
+    width: 100%;
+}
+
+.add_to_cart_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 60px;
+}
+
+.add_to_cart_container button {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 75%;
+    height: 100%;
+    color: var(--white);
+    background-color: var(--blue);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.more_data_container {
+    padding: 0 30px;
+    border-left: 1px solid #8080802b;
+}
+
+.hassle_free {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 0 15px 0;
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    border-bottom: 1px solid #8080802b
+}
+
+.hassle_free span {
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+}
+
+.seller_container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 0 15px 0;
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    border-bottom: 1px solid #8080802b
+}
+
+
+.seller_container img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid #8080802b;
+}
+
+.seller_container p {
+    margin-bottom: 5px;
+}
+
+.seller_container p strong {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+.seller_info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.seller_achievements {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0 15px 0;
+    font-size: 1rem;
+    color: var(--dark-gray);
+    border-bottom: 1px solid #8080802b
+}
+
+.achievement {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement img {
+    width: 30px;
+}
+
+.achievement h3 {
+    width: 100px;
+    font-size: 0.8rem;
+}
+
+.as_described {
+    text-align: center;
+    padding: 0 0 0 15px;
+    font-size: 0.8rem;
+    border-left: 1px solid #8080802b
+}
+
+
+.as_described span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--green);
+}
+
 

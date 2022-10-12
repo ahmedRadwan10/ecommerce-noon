@@ -17,9 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:categoryTitle" element={<Category />} />
-          <Route path="/:categoryTitle/:categoryID/:subCategoryTitle/:subCategoryID/:productTitle/:productID" element={<Product />} />
+          <Route path="/:categoryTitle/:subCategoryTitle/:productID" element={<Product />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </div>
   );

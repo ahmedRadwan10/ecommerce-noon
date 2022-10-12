@@ -86,6 +86,7 @@ export async function getCategoryProducts(dispatch, categoryTitle) {
 }
 
 export function getProduct(dispatch, categories, categoryID, subCategoryID, productID) {
+    console.log(categories, categoryID, subCategoryID, productID)
     categories.forEach(cat => {
         if (cat.id === categoryID) {
             const subCategory = cat.__collections__.subCategories[subCategoryID];
