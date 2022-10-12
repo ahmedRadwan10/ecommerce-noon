@@ -1,9 +1,11 @@
 import React, { useRef } from 'react';
 import { useEffect } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import styles from "./ProductsOverview.module.css";
 
 const ProductsOverview = ({ data }) => {
     const productsContainer = useRef();
+    const navigate = useNavigate();
 
     const renderProductOldPrice = (product) => {
         return (
@@ -28,8 +30,12 @@ const ProductsOverview = ({ data }) => {
     const renderProducts = () => {
         if (data.products) return data.products.map(product => {
             if (product["img-src"]) {
-                return <div key={product["web-scraper-order"]} className={styles.product_container}>
-                        <img src={product["img-src"].replace(/tr:n-t_80/i, "tr:n-t_240")} alt={product.title} />
+                return <div
+                        key={product["web-scraper-order"]}
+                        className={styles.product_container}
+                        onClick={() => navigate(`/${product.category.title}/${product.category.id}/${product.subCategory.title}/${product.subCategory.id}/${product.title}/${product.id}`)}
+                        >
+                        <img src={product["img-src"].replace(/tr:n-t_80/i, "tr:n-t_400")} alt={product.title} />
                         <p title={product.title}>{product.title}</p>
                         <div className={styles.new_price_container}>
                             EGP

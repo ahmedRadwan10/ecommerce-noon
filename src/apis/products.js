@@ -1,8 +1,8 @@
-import { removeSubCategories, selectSubCategories } from "../redux/slices/categorySlice";
+import { removeSubCategories, selectProduct, selectSubCategories } from "../redux/slices/categorySlice";
 import { fetchDeal } from "../redux/slices/collectionSlice";
 
 export async function getHotDealsProducts(dispatch, minSale) {
-    const response = await fetch('../data/categories.json');
+    const response = await fetch('/data/categories.json');
     const { data } = await response.json();
     const products = [];
     Object.keys(data).forEach(catKey => {
@@ -15,7 +15,12 @@ export async function getHotDealsProducts(dispatch, minSale) {
                     productObj.new_price = parseInt(productObj.new_price.slice(4));
                     productObj.old_price = parseInt(productObj.old_price.slice(4));
                     const sale = Math.floor(100 - (productObj.new_price / productObj.old_price) * 100);
-                    if (sale > minSale) products.push(productObj);
+                    if (sale > minSale) products.push({
+                        ...productObj,
+                        id: productKey,
+                        category: { title: data[catKey].title, id: catKey },
+                        subCategory: { title: subCategories[subKey].title, id: subKey }
+                    });
                 }
             });
         });
@@ -24,7 +29,7 @@ export async function getHotDealsProducts(dispatch, minSale) {
 }
 
 export async function getAllDealsProducts(dispatch, minSale) {
-    const response = await fetch('../data/categories.json');
+    const response = await fetch('/data/categories.json');
     const { data } = await response.json();
     let products = [];
     Object.keys(data).forEach(catKey => {
@@ -37,7 +42,12 @@ export async function getAllDealsProducts(dispatch, minSale) {
                     productObj.new_price = parseInt(productObj.new_price.slice(4));
                     productObj.old_price = parseInt(productObj.old_price.slice(4));
                     const sale = Math.floor(100 - (productObj.new_price / productObj.old_price) * 100);
-                    if (sale > minSale) products.push(productObj);
+                    if (sale > minSale) products.push({
+                        ...productObj,
+                        id: productKey,
+                        category: { title: data[catKey].title, id: catKey },
+                        subCategory: { title: subCategories[subKey].title, id: subKey }
+                    });
                 }
             });
             if (products.length > 6) dispatch(fetchDeal({ title: `${subCategories[subKey].title} deals`, products }));
@@ -47,7 +57,7 @@ export async function getAllDealsProducts(dispatch, minSale) {
 }
 
 export async function getCategoryProducts(dispatch, categoryTitle) {
-    const response = await fetch('../data/categories.json');
+    const response = await fetch('/data/categories.json');
     const { data } = await response.json();
 
     dispatch(removeSubCategories());
@@ -61,11 +71,31 @@ export async function getCategoryProducts(dispatch, categoryTitle) {
                     const productObj = productsObj[productKey];
                     if (productObj.old_price) productObj.old_price = parseInt(productObj.old_price.slice(4));
                     if (productObj.new_price) productObj.new_price = parseInt(productObj.new_price.slice(4));
-                    products.push(productObj);
+                    products.push({
+                        ...productObj,
+                        id: productKey,
+                        category: { title: categoryTitle, id: catKey },
+                        subCategory: { title: subCategoriesObj[subKey].title, id: subKey }
+                    });
                 });
                 dispatch(selectSubCategories({ title: `${subCategoriesObj[subKey].title}`, products }))
                 products = [];
             });
+        }
+    });
+}
+
+export function getProduct(dispatch, categories, categoryID, subCategoryID, productID) {
+    categories.forEach(cat => {
+        if (cat.id === categoryID) {
+            const subCategory = cat.__collections__.subCategories[subCategoryID];
+            const product = subCategory.__collections__.products[productID];
+            dispatch(selectProduct({
+                ...product,
+                id: productID,
+                category: { title: cat.title, id: categoryID },
+                subCategory: { title: subCategory.title, id: subCategoryID }
+            }));
         }
     });
 }

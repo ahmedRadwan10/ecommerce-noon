@@ -1,7 +1,7 @@
 import { fetchCategories } from "../redux/slices/categorySlice";
 
 export async function getCategories(dispatch) {
-    const response = await fetch('../data/categories.json');
+    const response = await fetch('/data/categories.json');
     const { data } = await response.json();
     const categories = [];
     Object.keys(data).forEach(key => {

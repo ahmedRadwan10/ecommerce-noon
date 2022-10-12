@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getCategories } from "../../apis/categories";
 import { removeSelectedCategory, selectCategory } from "../../redux/slices/categorySlice";
 import CategoryOverview from "./CategoryOverview";
@@ -9,6 +9,7 @@ const CategoryNav = ({ styles }) => {
     const categories = useSelector(({ categoryState }) => categoryState.categories);
     const dispatch = useDispatch();
     const categoryList = useRef();
+    const navigate = useNavigate();
 
     const scrollListToLeft = () => {
         categoryList.current.scrollLeft -= 150;
@@ -43,10 +44,11 @@ const CategoryNav = ({ styles }) => {
             (category) =>
                 <li 
                     key={category.id}
+                    onClick={() => navigate(`${category.title}`)}
                     onMouseOver={() => selectCurrentCategory(category.id, category.order)}
                     onMouseLeave={handleOnMouseLeave}
                     >
-                        <Link to={`${category.title}`} onClick={() => dispatch(removeSelectedCategory())}>{category.title.toUpperCase()}</Link>
+                       {category.title.toUpperCase()}
                     </li>
         );
     }

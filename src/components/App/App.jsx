@@ -6,6 +6,7 @@ import styles from '../Header/CategoryNav.module.css';
 import Home from '../Home/Home';
 import Footer from '../Footer/Footer';
 import Category from '../Category/Category';
+import Product from '../Product/Product';
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:categoryTitle" element={<Category />} />
+          <Route path="/:categoryTitle/:categoryID/:subCategoryTitle/:subCategoryID/:productTitle/:productID" element={<Product />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

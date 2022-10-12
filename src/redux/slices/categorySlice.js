@@ -4,6 +4,7 @@ const initialState = {
   categories: [],
   subCategories: [],
   selectedCategory: {},
+  selectedProduct: {},
 }
 
 export const categorySlice = createSlice({
@@ -23,11 +24,14 @@ export const categorySlice = createSlice({
       state.selectedCategory = action.payload;
     },
     removeSelectedCategory: (state) => {
-          state.selectedCategory = {};
+      state.selectedCategory = {};
+    },
+    selectProduct: (state, action) => {
+      state.selectedProduct = action.payload;
     }
   }
 });
 
-export const { fetchCategories, selectSubCategories, removeSubCategories, selectCategory, removeSelectedCategory } = categorySlice.actions;
+export const { fetchCategories, selectSubCategories, removeSubCategories, selectCategory, removeSelectedCategory, selectProduct } = categorySlice.actions;
 
 export default categorySlice.reducer;
