@@ -7,6 +7,7 @@ import { getProduct } from '../../apis/products';
 import ProductData from './ProductData';
 import Image from './Image';
 import MoreData from './MoreData';
+import { removeSelectedProduct } from '../../redux/slices/categorySlice';
 
 const Product = () => {
     const categories = useSelector(({ categoryState }) => categoryState.categories);
@@ -16,18 +17,20 @@ const Product = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+        getProduct(dispatch, params.subID, params.productID);
+        return () => dispatch(removeSelectedProduct());
+    }, [categories, params]);
 
     if (product.id) return (
         <div className={styles.main_container}>
             <div className={styles.nav_container}>
-                <Link to={`/${params.categoryTitle}`}>{params.categoryTitle}</Link>
+                <Link to={`/${product.category.title}`}>{product.category.title}</Link>
                 <span>{">"}</span>
-                <Link to={`/${params.categoryTitle}/${params.subCategoryTitle}`}>{params.subCategoryTitle}</Link>
+                <Link to={`/${product.category.title}/${product.subCategory.title}`}>{product.subCategory.title}</Link>
             </div>
             <div className={styles.flex_container}>
-                <div>
-                    <Image className={styles.product_img} imgSrc={product["img-src"].replace(/tr:n-t_80/i, "tr:n-t_400")} imgAlt={product.title} />
+                <div className={styles.product_img_container}>
+                    <Image imgSrc={product["img-src"].replace(/tr:n-t_80/i, "tr:n-t_400")} imgAlt={product.title} />
                 </div>
                <ProductData product={product} />
                <MoreData  product={product}/>

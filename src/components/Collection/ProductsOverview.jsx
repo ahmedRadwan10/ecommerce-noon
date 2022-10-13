@@ -39,7 +39,9 @@ const ProductsOverview = ({ data }) => {
                         className={styles.product_container}
                         onClick={() => handleProductOnClick(product)}
                         >
-                        <Image imgSrc={product["img-src"].replace(/tr:n-t_80/i, "tr:n-t_400")} imgAlt={product.title} />
+                        <div className={styles.product_img_container}>
+                            <Image imgSrc={product["img-src"].replace(/tr:n-t_80/i, "tr:n-t_400")} imgAlt={product.title} />
+                        </div>
                         <p title={product.title}>{product.title}</p>
                         <div className={styles.new_price_container}>
                             EGP
@@ -56,8 +58,7 @@ const ProductsOverview = ({ data }) => {
     }
 
     const handleProductOnClick = (product) => {
-        navigate(`/${product.category.title}/${product.subCategory.title}/${product.id}`)
-        dispatch(selectProduct(product));
+        navigate(`/${product.category.title}/${product.subCategory.id}/${product.id}`)
     }
 
     const scrollProductsToLeft = () => {

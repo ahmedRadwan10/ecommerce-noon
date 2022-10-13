@@ -28,10 +28,13 @@ export const categorySlice = createSlice({
     },
     selectProduct: (state, action) => {
       state.selectedProduct = action.payload;
+    },
+    removeSelectedProduct: (state) => {
+      state.selectedProduct = {};
     }
   }
 });
 
-export const { fetchCategories, selectSubCategories, removeSubCategories, selectCategory, removeSelectedCategory, selectProduct } = categorySlice.actions;
+export const { fetchCategories, selectSubCategories, removeSubCategories, selectCategory, removeSelectedCategory, selectProduct, removeSelectedProduct } = categorySlice.actions;
 
 export default categorySlice.reducer;

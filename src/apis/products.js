@@ -85,18 +85,21 @@ export async function getCategoryProducts(dispatch, categoryTitle) {
     });
 }
 
-export function getProduct(dispatch, categories, categoryID, subCategoryID, productID) {
-    console.log(categories, categoryID, subCategoryID, productID)
-    categories.forEach(cat => {
-        if (cat.id === categoryID) {
-            const subCategory = cat.__collections__.subCategories[subCategoryID];
-            const product = subCategory.__collections__.products[productID];
-            dispatch(selectProduct({
-                ...product,
-                id: productID,
-                category: { title: cat.title, id: categoryID },
-                subCategory: { title: subCategory.title, id: subCategoryID }
-            }));
-        }
+export async function getProduct(dispatch, subCategoryID, productID) {
+    const response = await fetch('/data/categories.json');
+    const { data } = await response.json();
+    Object.keys(data).forEach(catKey => {
+        const subCategoriesObj = data[catKey].__collections__.subCategories;
+        Object.keys(subCategoriesObj).forEach(subKey => { 
+            if (subKey === subCategoryID) {
+                const product = subCategoriesObj[subKey].__collections__.products[productID];
+                dispatch(selectProduct({
+                    ...product,
+                    id: productID,
+                    category: { title: data[catKey].title, id: catKey },
+                    subCategory: { title: subCategoriesObj[subKey].title, id: subCategoryID }
+                }));
+            }
+        });
     });
 }

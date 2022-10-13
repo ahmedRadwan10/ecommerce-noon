@@ -10,62 +10,50 @@
   },
   "data": {
     "home": {
-      "headerImg": "https://f.nooncdn.com/cms/pages/20220915/db40b276b580ce6c408b1a1b90dec594/en_dk_eg-toggle-01.png",
+      "headerImg": "",
       "sliderImgs": [
-        "https://f.nooncdn.com/cms/pages/20220920/60c6d66b9b79b8674453b3231c75428a/en_dk_eg-banner-01.png",
-        "https://f.nooncdn.com/cms/pages/20220918/bb6848e7e20efc8944920c3019f8a890/en_dk_eg-hero-01.gif",
-        "https://f.nooncdn.com/cms/pages/20220921/16d6544be8236f2672f7eebc097fe28b/en_dk_eg-hero-banner-01.png",
-        "https://f.nooncdn.com/cms/pages/20220919/1c6fd9c4afd5c575a8a36d30ab05b265/en_dk_eg-banner-01.png",
-        "https://f.nooncdn.com/cms/pages/20220922/f8fea5eef15a809e976d3cbc6d17cb32/en_dk_eg-hero-01.png",
-        "https://f.nooncdn.com/cms/pages/20220925/0b75682cc0ac6762d4dccae74df159cb/en_dk_eg-hero-banner-01.gif",
-        "https://f.nooncdn.com/cms/pages/20220922/d24420e746f50d6660cf1fe7a16ede64/en_dk_eg-banner-01.png",
-        "https://f.nooncdn.com/cms/pages/20220123/47a3177d805e590a65dc3341c58998f9/en_slider-01.png",
-        "https://f.nooncdn.com/cms/pages/20220928/0001b4b46fa850bf409a192d0a50cec4/en_dk_eg-hero-banner-01.png",
-        "https://f.nooncdn.com/cms/pages/20220927/5d8f45e1f942637c54ac8d4cdf55ba41/en_dk_eg-hero-banner-01.png"
+        "/data/assets/png/en_dk_eg-strip-01.png",
+        "/data/assets/png/en_dk_eg-slider-01.png",
+        "/data/assets/png/en_dk_eg-hero-banner-01.png",
+        "/data/assets/png/en_dk_eg-hero-banner-01 (1).png",
+        "/data/assets/png/en_dk_eg-hero-banner-01 (2).png",
+        "/data/assets/png/en_dk_eg-hero-banner-01 (3).png"
       ]
     },
     "electronics": {
-      "headerImg": "https://z.nooncdn.com/mpcms/EN0003/assets/6339a048-93c8-4470-921f-4bbc1789cc98.png",
+      "headerImg": "/data/assets/png/6339a048-93c8-4470-921f-4bbc1789cc98.png",
       "sliderImgs": [
-        "https://z.nooncdn.com/mpcms/EN0003/assets/47fecc11-490d-4039-a1ca-8b8962640ea4.png"
+        "/data/assets/png/47fecc11-490d-4039-a1ca-8b8962640ea4.png"
       ]
     },
     "mobiles": {
-      "headerImg": "https://z.nooncdn.com/cms/pages/20220215/1680fd1dca201090d4b93ea496d4a792/en_dk_eg-toggle-01.png",
+      "headerImg": "/data/assets/png/6339a048-93c8-4470-921f-4bbc1789cc98.png",
       "sliderImgs": [
-        "https://z.nooncdn.com/cms/pages/20220207/0dbba3adb9e696d49fac739325539ca2/en_banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20220917/35703cb0086d2fe90fea1f1fff44b3a2/en_dk_eg-hero-banner-01.png"
+        "/data/assets/png/en_dk_eg-hero-banner-01 (4).png",
+        "/data/assets/png/en_banner-01.png"
       ]
     },
     "men": {
-      "headerImg": "https://z.nooncdn.com/cms/pages/20220922/9d7e6debcff57b671dc67e805dc695cf/en_dk_eg-toggle-01.png",
+      "headerImg": "/data/assets/png/en_dk_eg-toggle-01.png",
       "sliderImgs": [
-        "https://z.nooncdn.com/cms/pages/20221005/7bd6037749aa476d7a08f6ede7c1fdfe/Men/en_dk_eg-hero-banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20220929/390ec06e41583050e3cbc236ac420006/men/en_dk_eg-hero-banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20220926/843fcbc7d8df221fc823cb2a0b76cbf0/men50/en_dk_eg-hero-banner-01.png"
+        "/data/assets/gif/en_dk_eg-hero-01.gif",
+        "/data/assets/gif/en_dk_eg-hero-banner-01.png"
       ]
     },
     "home-kitchen": {
-      "headerImg": "https://z.nooncdn.com/cms/pages/20220922/9d7e6debcff57b671dc67e805dc695cf/en_dk_eg-toggle-01.png",
+      "headerImg": "/data/assets/png/en_dk_eg-toggle-01.png",
       "sliderImgs": [
-        "https://z.nooncdn.com/cms/pages/20220929/625e4f75a657e4085af9855aa34ba383/en_dk_eg-hero-banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20220922/2c97bd33e013d8611bd1f07640fa5962/en_dk_eg-hero-banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20220724/15869bee673a4840f069be0d9d2cb880/en_dk_eg-hero-01.gif",
-        "https://z.nooncdn.com/cms/pages/20220921/2c81a8a7e362a646b4608233e7c4a5b5/en_dk_eg-hero-banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20220519/8a7a39c94f916cbfb6c4ac32f9ab8f75/en_slider-01.png",
-        "https://z.nooncdn.com/cms/pages/20220510/c785f16d3cba227856540d669360c914/en_banner-01.gif",
-        "https://z.nooncdn.com/cms/pages/20220510/c785f16d3cba227856540d669360c914/en_banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20210928/6eba25c63badb2496a981c6021c3cb02/en_banner-01.png"
+        "/data/assets/png/en_dk_eg-hero-banner-01 (5).png",
+        "/data/assets/png/en_dk_eg-hero-banner-01 (6).png",
+        "/data/assets/gif/en_dk_eg-hero-019.gif",
+        "/data/assets/png/en_dk_eg-hero-banner-01 (8).png"
       ]
     },
     "supermarket": {
-      "headerImg": "https://z.nooncdn.com/cms/pages/20220922/9d7e6debcff57b671dc67e805dc695cf/en_dk_eg-toggle-01.png",
+      "headerImg": "/data/assets/png/en_dk_eg-toggle-01.png",
       "sliderImgs": [
-        "https://z.nooncdn.com/cms/pages/20221009/7de0b0c5a4f34d650e863eb5c4a66305/en_dk_eg-hero-banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20221009/cb52ed509835e63ba20739f4ade8bb2d/en_dk_eg-hero-banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20221003/c2bed8c97c0dd411e17ab8d4e3ddd260/en_dk_eg-hero-banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20220928/8ee1eb5c7e8282c6c85747eded473fb1/en_dk_eg-hero-banner-01.png",
-        "https://z.nooncdn.com/cms/pages/20220922/dbb14501ccf174b4e69bb92d06210028/en_dk_eg-hero-banner-01.png"
+        "/data/assets/png/en_dk_eg-hero-banner-01 (7).png",
+        "/data/assets/png/en_dk_eg-hero-banner-01 (9).png"
       ]
     }
   }
