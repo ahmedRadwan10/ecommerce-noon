@@ -19,6 +19,7 @@ const Category = () => {
       }
 
     useEffect(() => {
+        document.title = `${params.categoryTitle.charAt(0).toUpperCase()}${params.categoryTitle.slice(1)} | Online Shopping`;
         getSlider(dispatch, params.categoryTitle === "home" ? "home-kitchen" : params.categoryTitle);
         getCategoryProducts(dispatch, params.categoryTitle);
     }, [params]);

@@ -21,27 +21,27 @@
       ]
     },
     "electronics": {
-      "headerImg": "/data/assets/png/6339a048-93c8-4470-921f-4bbc1789cc98.png",
+      "headerImg": "",
       "sliderImgs": [
         "/data/assets/png/47fecc11-490d-4039-a1ca-8b8962640ea4.png"
       ]
     },
     "mobiles": {
-      "headerImg": "/data/assets/png/6339a048-93c8-4470-921f-4bbc1789cc98.png",
+      "headerImg": "",
       "sliderImgs": [
         "/data/assets/png/en_dk_eg-hero-banner-01 (4).png",
         "/data/assets/png/en_banner-01.png"
       ]
     },
     "men": {
-      "headerImg": "/data/assets/png/en_dk_eg-toggle-01.png",
+      "headerImg": "",
       "sliderImgs": [
         "/data/assets/gif/en_dk_eg-hero-01.gif",
         "/data/assets/gif/en_dk_eg-hero-banner-01.png"
       ]
     },
     "home-kitchen": {
-      "headerImg": "/data/assets/png/en_dk_eg-toggle-01.png",
+      "headerImg": "",
       "sliderImgs": [
         "/data/assets/png/en_dk_eg-hero-banner-01 (5).png",
         "/data/assets/png/en_dk_eg-hero-banner-01 (6).png",
@@ -50,7 +50,7 @@
       ]
     },
     "supermarket": {
-      "headerImg": "/data/assets/png/en_dk_eg-toggle-01.png",
+      "headerImg": "",
       "sliderImgs": [
         "/data/assets/png/en_dk_eg-hero-banner-01 (7).png",
         "/data/assets/png/en_dk_eg-hero-banner-01 (9).png"

@@ -62,7 +62,7 @@ const ProductData = ({ product }) => {
         <div className={styles.all_data_container}>
             <h4>{product.brand_name}</h4>
             <h3>{product.title}</h3>
-            <div className={styles.model_container}>
+            <div className={product.model_number ? styles.model_container : styles.without_modal}>
                 <p>{product.model_number}</p>
                 { product.rating ? <div className={styles.rating_container}>{product.rating}<i className="fa-solid fa-star fa-sm"></i></div> : "" }
                 <p className={styles.reviews}>{product.reviews_number}</p>

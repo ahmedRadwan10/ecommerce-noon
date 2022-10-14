@@ -49,7 +49,7 @@ const ProductsOverview = ({ data }) => {
                         </div>
                         {product.old_price ? renderProductOldPrice(product) : ""}
                         <div className={styles.product_footer}>
-                            <img src="https://f.nooncdn.com/s/app/com/noon/images/fulfilment_express_v2-en.svg" alt="Express" />
+                            <Image imgSrc={"/data/assets/svg/fulfilment_express_v2-en.svg"} />
                             {product.reviews_number ? renderProductRating(product) : ""}
                         </div>
                 </div>
