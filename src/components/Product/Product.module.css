@@ -11,6 +11,10 @@
     gap: 10px;
 }
 
+.nav_container span {
+    font-size: 0.6rem;
+}
+
 .nav_container a {
     display: inline-block;
     font-size: 0.8rem;

@@ -47,11 +47,18 @@
     gap: 8px;
 }
 
+.text_container i {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+}
+
 .deliver_text {
     font-size: 14px;
     font-weight: 300;
     color: var(--dark-gray);
 } 
+
+
 
 .location_text {
     max-width: 100%;

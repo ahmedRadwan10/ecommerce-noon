@@ -16,7 +16,7 @@ const Product = () => {
     const params = useParams();
 
     useEffect(() => {
-        if (product.id) document.title = product.title;
+        if (product.id) document.title = `${product.title} | Online Shopping`;
         return () => document.title = "Online Shopping";
     }, [product]);
 
@@ -24,23 +24,23 @@ const Product = () => {
         window.scrollTo(0, 0);
         getProduct(dispatch, params.subID, params.productID);
         return () => dispatch(removeSelectedProduct());
-    }, [categories, params]);
+    }, [categories, params, dispatch]);
 
     return (
         <div className={styles.main_container}>
-            {product.id ? <>
+            { product.id ? <>
                 <div className={styles.nav_container}>
                             <Link to={`/${product.category.title}`}>{product.category.title}</Link>
-                            <span>{">"}</span>
+                            <span><i className="fa-solid fa-chevron-right"></i></span>
                             <Link to={`/${product.category.title}/${product.subCategory.title}`}>{product.subCategory.title}</Link>
                         </div>
                          <div className={styles.flex_container}>
                              <div className={styles.product_img_container}>
-                                 <Image imgSrc={product["img-src"].replace(/tr:n-t_80/i, "tr:n-t_400")} imgAlt={product.title} />
+                                 <Image imgSrc={`/data/assets/products/${product["img-src"].split('/').at(-1)}`} imgAlt={product.title} />
                             </div>
                             <ProductData product={product} />
-                            <MoreData  product={product}/>
-                        </div>
+                            <MoreData  product={product} />
+                </div>
                         </> : "" }
                     </div>
     );

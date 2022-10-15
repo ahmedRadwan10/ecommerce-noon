@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
 import styles from "./Product.module.css";
 import Select from '@mui/material/Select';
 import { MenuItem } from '@mui/material';
@@ -70,7 +69,7 @@ const ProductData = ({ product }) => {
             { product.old_price ? renderOldPrice() : "" }
             { product.new_price ? renderNewPrice() : "" }
             { product.old_price ? renderSaving() : "" }
-            {renderDeliveryDate()}
+            { renderDeliveryDate() }
             <div className={styles.add_to_cart_container}>
                 <Select
                     sx={{ width: "20%", height: "100%", fontFamily: "inherit", outline: "none", border: "none" }}

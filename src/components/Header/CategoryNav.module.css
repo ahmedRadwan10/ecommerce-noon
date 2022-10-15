@@ -4,19 +4,6 @@
     display: flex;
 }
 
-.all_categories {
-    width: 216px;
-    color: var(--blue);
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-}
-
 .list_container {
     scroll-behavior: smooth;
     overflow: hidden;
@@ -30,7 +17,7 @@
 .category_list {
     width: 1025px;
     height: 45px;
-    padding-left: 35px;
+    /* padding-left: 35px; */
     display: flex;
     align-items: center;
     flex-shrink: 0;
@@ -45,6 +32,7 @@
     align-items: center;
     font-weight: 600;
     font-size: 14px;
+    color: var(--dark-gray);
     cursor: pointer;
 }
 
