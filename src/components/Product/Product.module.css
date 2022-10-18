@@ -52,6 +52,7 @@
 
 .product_img_container img {
     min-width: 30%;
+    width: 80%;
 }
 
 .all_data_container {
