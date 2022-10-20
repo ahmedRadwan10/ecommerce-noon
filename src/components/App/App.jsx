@@ -9,6 +9,7 @@ import Category from '../Category/Category';
 import Product from '../Product/Product';
 
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>

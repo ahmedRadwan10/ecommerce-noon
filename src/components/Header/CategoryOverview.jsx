@@ -52,6 +52,7 @@ const CategoryOverview = () => {
             style={selectedCategory.id ? { display: 'flex' } : { display: 'none' }}
         >
             <div ref={categoryOverviewElement}
+                id="category-overview-element"
                 className={styles.category_overview}
                 onMouseLeave={handleOnMouseLeave}
             >

@@ -11,14 +11,10 @@ const CategoryNav = ({ styles }) => {
     const categoryList = useRef();
     const navigate = useNavigate();
 
-    const scrollListToLeft = () => {
-        categoryList.current.scrollLeft -= 150;
+    window.onscroll = () => {
+        dispatch(removeSelectedCategory());
     }
-
-    const scrollListToRight = () => {
-        categoryList.current.scrollLeft += 150;
-    }
-
+    
     const selectCurrentCategory = (categoryID, categoryOrder) => {
         if (categoryOrder <= 5) {
             categories.forEach((cat) => {
@@ -30,13 +26,14 @@ const CategoryNav = ({ styles }) => {
     }
 
     const handleOnMouseLeave = () => {
-        // let elementsMouseOver = document.querySelectorAll(":hover" )
-        // let elementsArray = [...elementsMouseOver];
-        // let currentMouseOverElement = elementsArray.at(-1);
+        let elementsMouseOver = document.querySelectorAll(":hover" )
+        let elementsArray = [...elementsMouseOver];
+        let currentMouseOverElement = elementsArray.at(-1);
+        let categoryOverviewElement = document.querySelector("#category-overview-element");
 
-        // // if (currentMouseOverElement !== ) {
-        // //     dispatch(removeSelectedCategory());
-        // // }
+        if (currentMouseOverElement !== categoryOverviewElement) {
+            dispatch(removeSelectedCategory());
+        }
     }
     
     const renderCategories = () => {

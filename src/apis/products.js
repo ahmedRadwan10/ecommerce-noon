@@ -1,4 +1,4 @@
-import { removeSubCategories, selectProduct, selectSubCategories } from "../redux/slices/categorySlice";
+import { removeSubCategories, selectProduct, selectSubCategories, selectSubCategory } from "../redux/slices/categorySlice";
 import { fetchDeal } from "../redux/slices/collectionSlice";
 
 export async function getHotDealsProducts(dispatch, minSale) {
@@ -98,6 +98,36 @@ export async function getProduct(dispatch, subCategoryID, productID) {
                     id: productID,
                     category: { title: data[catKey].title, id: catKey },
                     subCategory: { title: subCategoriesObj[subKey].title, id: subCategoryID }
+                }));
+            }
+        });
+    });
+}
+
+
+export async function getSubCategory(dispatch, subCategoryID) {
+    const response = await fetch('/data/categories.json');
+    const { data } = await response.json();
+    let products = [];
+    Object.keys(data).forEach(catKey => {
+        const subCategoriesObj = data[catKey].__collections__.subCategories;
+        Object.keys(subCategoriesObj).forEach(subKey => { 
+            if (subKey === subCategoryID) {
+                const productsObj = subCategoriesObj[subKey].__collections__.products;
+                Object.keys(productsObj).forEach(productKey => {
+                    const productObj = productsObj[productKey];
+                    if (productObj.old_price) productObj.old_price = parseInt(productObj.old_price.slice(4));
+                    if (productObj.new_price) productObj.new_price = parseInt(productObj.new_price.slice(4));
+                    products.push({
+                        ...productObj,
+                        id: productKey,
+                        category: { title: data[catKey].title, id: catKey },
+                        subCategory: { title: subCategoriesObj[subKey].title, id: subKey }
+                    });
+                });
+                dispatch(selectSubCategory({
+                    title: subCategoriesObj[subKey].title,
+                    products: products
                 }));
             }
         });
