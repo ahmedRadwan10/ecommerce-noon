@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getCategoryProducts } from '../../apis/products';
 import { getSlider } from '../../apis/sliders';
 import ImageSlider from '../Collection/ImageSlider';
-import ProductsOverview from '../Collection/ProductsOverview';
+import Spinner from '../Spinner/Spinner';
 import styles from "./Category.module.css";
 
 const Category = () => {
+
+    const ProductsOverview = lazy(async () =>  {
+        return new Promise(resolve => setTimeout(resolve, 1000)).then(
+          () => import("../Collection/ProductsOverview")
+        );
+    });
+
     const params = useParams();
     const dispatch = useDispatch();
     const slider = useSelector(({ collectionState }) => collectionState.sliders[ params.categoryTitle === "home" ? "home-kitchen" : params.categoryTitle]);
@@ -22,12 +29,14 @@ const Category = () => {
         document.title = `${params.categoryTitle.charAt(0).toUpperCase()}${params.categoryTitle.slice(1)} | Online Shopping`;
         getSlider(dispatch, params.categoryTitle === "home" ? "home-kitchen" : params.categoryTitle);
         getCategoryProducts(dispatch, params.categoryTitle);
-    }, [params]);
+    }, [params, dispatch]);
 
     return (
         <div className={styles.main_container}>
-            <ImageSlider slider={slider} />    
-            { renderProductsOverviews() } 
+            <Suspense fallback={<Spinner />}>
+                <ImageSlider slider={slider} />    
+                { renderProductsOverviews() } 
+            </Suspense>
         </div>
     );
 }

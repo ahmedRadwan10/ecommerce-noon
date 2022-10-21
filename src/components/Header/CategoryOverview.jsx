@@ -13,7 +13,7 @@ const CategoryOverview = () => {
     const displaySubCategories = () => {
         if (selectedCategory.id) {
             let subCategoriesObj = selectedCategory.__collections__.subCategories;
-            return Object.keys(subCategoriesObj).map(subKey => <Link to={`/${subCategoriesObj[subKey].title}`} key={subKey}><li>{subCategoriesObj[subKey].title}</li></Link>);
+            return Object.keys(subCategoriesObj).map(subKey => <li key={subKey}>{subCategoriesObj[subKey].title}</li>);
         } 
     }
 
@@ -43,10 +43,6 @@ const CategoryOverview = () => {
         }
     }
 
-    useEffect(() => {
-       
-    }, [selectedCategory])
-
     return (
         <div className={styles.category_overview_container}
             style={selectedCategory.id ? { display: 'flex' } : { display: 'none' }}
@@ -59,7 +55,7 @@ const CategoryOverview = () => {
                 <div className={styles.sub_categories}>
                     <h5>CATEGORIES</h5>
                     <ul className={styles.sub_categories_list}>
-                    { displaySubCategories() }
+                        { displaySubCategories() }
                     </ul>
                 </div>
                 <div className={styles.top_brands}>

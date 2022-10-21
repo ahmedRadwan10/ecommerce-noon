@@ -9,7 +9,7 @@ const Image = ({ imgSrc }) => {
     }
 
     return (
-        <img onError={handleError} src={imgIsOk ? imgSrc : "/data/assets/svg/noon.svg"} alt="" />
+        <img onError={handleError} loading="lazy" src={imgIsOk ? imgSrc : "/data/assets/svg/noon.svg"} alt="" />
     );
 }
 

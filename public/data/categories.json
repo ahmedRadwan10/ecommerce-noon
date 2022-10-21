@@ -12,54 +12,54 @@
     "bnjAWdSyaaJYOfJR3tG8": {
       "order": 4,
       "photos": [
-        "https://z.nooncdn.com/cms/pages/20200211/a4434d79fa27923799e439818a30d655/en_drop-01.png",
-        "https://z.nooncdn.com/cms/pages/20200211/a4434d79fa27923799e439818a30d655/en_drop-02.png"
+        "/data/assets/png/en_drop-01.png",
+        "/data/assets/png/en_drop-02.png"
       ],
       "title": "home",
       "__collections__": {
         "brands": {
           "1utuw5dr5NMpvhxGym9N": {
-            "img": "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/drop-brand-12.png",
+            "img": "/data/assets/png/drop-brand-12.png",
             "name": "fresh",
             "__collections__": {}
           },
           "46ci7HEyRHxUjF5FkYCW": {
-            "img": "https://z.nooncdn.com/rn/brands_v1/tornado.png",
+            "img": "/data/assets/png/tornado.png",
             "name": "tornado",
             "__collections__": {}
           },
           "6ajVxmXByFESyhvJ9ym9": {
-            "img": "https://z.nooncdn.com/rn/brands_v1/toshiba.png",
+            "img": "/data/assets/png/toshiba.png",
             "name": "toshiba",
             "__collections__": {}
           },
           "Fk3AcDOfMVi7K5UE0dO7": {
-            "img": "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/drop-brand-14.png",
+            "img": "/data/assets/png/drop-brand-14.png",
             "name": "delonghi",
             "__collections__": {}
           },
           "LGig0ab78ZF0HM9Rx2xI": {
-            "img": "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/drop-brand-11.png",
+            "img": "/data/assets/png/drop-brand-11.png",
             "name": "philips",
             "__collections__": {}
           },
           "eJjjEkZo1MsiCI6aAcx2": {
-            "img": "https://z.nooncdn.com/rn/brands_v1/black_decker.png",
+            "img": "/data/assets/png/black_decker.png",
             "name": "black & decker",
             "__collections__": {}
           },
           "h2Pq8bi0U1Idnb0hatAy": {
-            "img": "https://z.nooncdn.com/rn/brands_v1/mienta.png",
+            "img": "/data/assets/png/mienta.png",
             "name": "mienta",
             "__collections__": {}
           },
           "mUgO1sEzYO4vhTmDQ5V7": {
-            "img": "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/drop-brand-15.png",
+            "img": "/data/assets/png/drop-brand-15.png",
             "name": "arion",
             "__collections__": {}
           },
           "ncTzcSkNTabbKCGgbEfG": {
-            "img": "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/drop-brand-13.png",
+            "img": "/data/assets/png/drop-brand-13.png",
             "name": "kenwood",
             "__collections__": {}
           }
@@ -5552,54 +5552,54 @@
     "8OfOpt1lUS3zWpEiA6bg": {
       "order": 5,
       "photos": [
-        "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/en_drop-06.png",
-        "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/en_drop-07.png"
+        "/data/assets/png/en_drop-06.png",
+        "/data/assets/png/en_drop-07.png"
       ],
       "title": "supermarket",
       "__collections__": {
         "brands": {
           "6G42CNt7QB4txUHrCxPm": {
-            "img": "https://z.nooncdn.com/cms/pages/20201024/eb6118b9a646288549dc9fbe0d894aab/en_gr-drop-brand-01.png",
+            "img": "/data/assets/png/en_gr-drop-brand-01.png",
             "name": "persil",
             "__collections__": {}
           },
           "8IsmwwnWUBq4wtwMmWGo": {
-            "img": "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/drop-brand-22.png",
+            "img": "/data/assets/png/drop-brand-22.png",
             "name": "crystal",
             "__collections__": {}
           },
           "G1kY9DbAUTtHF8ot1kSh": {
-            "img": "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/drop-brand-24.png",
+            "img": "/data/assets/png/drop-brand-24.png",
             "name": "lipton",
             "__collections__": {}
           },
           "IOO7iKpFtYq3Xbpo8U6K": {
-            "img": "https://z.nooncdn.com/cms/pages/20201024/eb6118b9a646288549dc9fbe0d894aab/en_gr-drop-brand-02.png",
+            "img": "/data/assets/png/en_gr-drop-brand-02.png",
             "name": "rehana",
             "__collections__": {}
           },
           "KZWmjNBNG0JC8AAexPOX": {
-            "img": "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/drop-brand-27.png",
+            "img": "/data/assets/png/drop-brand-27.png",
             "name": "oxi",
             "__collections__": {}
           },
           "NBEpJGSL5pSvDbUlCcmp": {
-            "img": "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/drop-brand-28.png",
+            "img": "/data/assets/png/drop-brand-28.png",
             "name": "ariel",
             "__collections__": {}
           },
           "UduPolipfchVDzK7fmXu": {
-            "img": "https://z.nooncdn.com/cms/pages/20201024/eb6118b9a646288549dc9fbe0d894aab/en_gr-drop-brand-03.png",
+            "img": "/data/assets/png/en_gr-drop-brand-03.png",
             "name": "downy",
             "__collections__": {}
           },
           "YXmItPbdHN1ejmiIbLBB": {
-            "img": "https://z.nooncdn.com/cms/pages/20200115/3335bf024f3b65b7be35bab3ce2bf882/drop-brand-21.png",
+            "img": "/data/assets/png/drop-brand-21.png",
             "name": "abu_auf",
             "__collections__": {}
           },
           "eCj8tyJ1DEhopiGy7TDP": {
-            "img": "https://z.nooncdn.com/cms/pages/20201024/eb6118b9a646288549dc9fbe0d894aab/en_gr-drop-brand-04.png",
+            "img": "/data/assets/png/en_gr-drop-brand-04.png",
             "name": "al_duha",
             "__collections__": {}
           }
@@ -13010,54 +13010,54 @@
     "sgN4m0pJ3lK4jL9FWThj": {
       "order": 2,
       "photos": [
-        "https://z.nooncdn.com/cms/pages/20210413/05e3cb23daf67ccd318c9e9aca852093/en_drop-01.png",
-        "https://z.nooncdn.com/cms/pages/20210413/05e3cb23daf67ccd318c9e9aca852093/en_drop-02.png"
+        "/data/assets/png/en_drop-01 (1).png",
+        "/data/assets/png/en_drop-02 (1).png"
       ],
       "title": "mobiles",
       "__collections__": {
         "brands": {
           "88ujlDdAjikjp24uKWJt": {
-            "img": "https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-06.png",
+            "img": "/data/assets/png/drop-brand-06.png",
             "name": "nokia",
             "__collections__": {}
           },
           "CkjmIYnJB5uPQ5jv3OCQ": {
-            "img": "https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-07.png",
+            "img": "/data/assets/png/drop-brand-07.png",
             "name": "honor",
             "__collections__": {}
           },
           "H4cRKRuHoavh4laYNajL": {
-            "img": "https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-09.png",
+            "img": "/data/assets/png/drop-brand-09.png",
             "name": "infinix",
             "__collections__": {}
           },
           "IqreIU7erKGxJcs4WQQK": {
-            "img": "https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-08.png",
+            "img": "/data/assets/png/drop-brand-08.png",
             "name": "realme",
             "__collections__": {}
           },
           "YE2g1BamCTgZhGhhyxF8": {
-            "img": "https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-04.png",
+            "img": "/data/assets/png/drop-brand-04.png",
             "name": "huawie",
             "__collections__": {}
           },
           "bRdlhDVyXUZvoyASciQB": {
-            "img": "https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-05.png",
+            "img": "/data/assets/png/drop-brand-05.png",
             "name": "oppo",
             "__collections__": {}
           },
           "c8Ffx6MWM6CDzPjZwNuL": {
-            "img": "https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-01.png",
+            "img": "/data/assets/png/drop-brand-01.png",
             "name": "samsung",
             "__collections__": {}
           },
           "gYYXZ7nZWg0W21N7jIJ7": {
-            "img": "https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-02.png",
+            "img": "/data/assets/png/drop-brand-02.png",
             "name": "xiaomi",
             "__collections__": {}
           },
           "tNzkjecsfBGnzqkJrigS": {
-            "img": "https://z.nooncdn.com/cms/pages/20210410/2a23ead9569718f23f16e78305f07230/drop-brand-03.png",
+            "img": "/data/assets/png/drop-brand-03.png",
             "name": "apple",
             "__collections__": {}
           }
@@ -21483,54 +21483,54 @@
     "pgCCiWh2JWyyvX0wXjiU": {
       "order": 1,
       "photos": [
-        "https://z.nooncdn.com/cms/pages/20210408/2792ffeaded707bd95f25bd124a83af9/en_drop-01.png",
-        "https://z.nooncdn.com/cms/pages/20210408/2792ffeaded707bd95f25bd124a83af9/en_drop-02.png"
+        "/data/assets/png/en_drop-01 (2).png",
+        "/data/assets/png/en_drop-02 (2).png"
       ],
       "title": "electronics",
       "__collections__": {
         "brands": {
           "0Hlw9vQKUXc6mtb1y02H": {
-            "img": "https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-04.png",
+            "img": "/data/assets/png/drop-brand-04 (1).png",
             "name": "hp",
             "__collections__": {}
           },
           "1IOs8mSarC7u1VSBJUia": {
-            "img": "https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-08.png",
+            "img": "/data/assets/png/drop-brand-08 (1).png",
             "name": "dell",
             "__collections__": {}
           },
           "IlovLiExLbtInOQE9CUv": {
-            "img": "https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-05.png",
+            "img": "/data/assets/png/drop-brand-05 (1).png",
             "name": "apple",
             "__collections__": {}
           },
           "OO3gB4qTf0oaMhnkJHjm": {
-            "img": "https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-02.png",
+            "img": "/data/assets/png/drop-brand-02 (1).png",
             "name": "canon",
             "__collections__": {}
           },
           "PAm1wHHNKC1OPwvI4V49": {
-            "img": "https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-03.png",
+            "img": "/data/assets/png/drop-brand-03 (1).png",
             "name": "sony",
             "__collections__": {}
           },
           "QdnhpFyhAMGcVs0DpPuv": {
-            "img": "https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-06.png",
+            "img": "/data/assets/png/drop-brand-06 (1).png",
             "name": "samsung",
             "__collections__": {}
           },
           "Wt3IFmFFxoKQZqiClZsY": {
-            "img": "https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-01.png",
+            "img": "/data/assets/png/drop-brand-01 (1).png",
             "name": "lenovo",
             "__collections__": {}
           },
           "iU7m4fv040Vna2CgZBA3": {
-            "img": "https://z.nooncdn.com/cms/pages/20210408/9852ea7d5c33973a1761053b129a047b/drop-brand-09.png",
+            "img": "/data/assets/png/drop-brand-09 (1).png",
             "name ": "lg",
             "__collections__": {}
           },
           "yR9ySHzFH5E3tv98kMfp": {
-            "img": "https://a.nooncdn.com/cms/pages/20210725/16e8652696b98e99147acca517cc2c76/drop-brand-10.png",
+            "img": "/data/assets/png/drop-brand-10.png",
             "name": "msi",
             "__collections__": {}
           }
@@ -30171,54 +30171,54 @@
     "heBvyL1ryGFDInh1vNbc": {
       "order": 3,
       "photos": [
-        "https://a.nooncdn.com/cms/pages/20220522/f98b0c088a83d0e3925769b0539dccfd/en_drop-1.png",
-        "https://a.nooncdn.com/cms/pages/20220522/f98b0c088a83d0e3925769b0539dccfd/en_drop-2.png"
+        "/data/assets/png/en_dk_eg-drop-01.png",
+        "/data/assets/png/en_dk_eg-drop-02.png"
       ],
       "title": "men",
       "__collections__": {
         "brands": {
           "CYyr0yKvVPg6AGcDmYLd": {
-            "img": "https://a.nooncdn.com/cms/pages/20210824/a985b37cdf68df0944d99557dedd0372/drop-brand-05.png",
+            "img": "/data/assets/png/drop-brand-05 (2).png",
             "name": "reebok",
             "__collections__": {}
           },
           "OAuYAgVnbIoArUovXUBO": {
-            "img": "https://a.nooncdn.com/cms/pages/20210824/a985b37cdf68df0944d99557dedd0372/drop-brand-04.png",
+            "img": "/data/assets/png/en_mb_eg-logo-03.png",
             "name": "puma",
             "__collections__": {}
           },
           "ZdFWNJaqqmMHoZIpNtaI": {
-            "img": "https://a.nooncdn.com/cms/pages/20210824/a985b37cdf68df0944d99557dedd0372/drop-brand-02.png",
+            "img": "/data/assets/png/drop-brand-02 (2).png",
             "name": "nike",
             "__collections__": {}
           },
           "cmojB6mXMenBYETfwVNJ": {
-            "img": "https://a.nooncdn.com/cms/pages/20211103/4f08f1a1034ebaca12d225ea069c798a/drop-brand-01.png",
+            "img": "/data/assets/png/drop-brand-01 (2).png",
             "name": "defacto",
             "__collections__": {}
           },
           "huqaRO5au8N1x4yYPXHi": {
-            "img": "https://a.nooncdn.com/cms/pages/20210824/a985b37cdf68df0944d99557dedd0372/drop-brand-06.png",
+            "img": "/data/assets/png/en_mb_eg-logo-04.png",
             "name": "adidas",
             "__collections__": {}
           },
           "jGe73Pufwu5vXN257Iw2": {
-            "img": "https://a.nooncdn.com/cms/pages/20210906/95b6db6326d3c20de69ffa76c8b5658f/drop-brand-10.png",
+            "img": "/data/assets/png/en_mb_eg-logo-02.png",
             "name": "skechers",
             "__collections__": {}
           },
           "l0Cddl2PHjPW7h5bbqWt": {
-            "img": "https://a.nooncdn.com/cms/pages/20210824/a985b37cdf68df0944d99557dedd0372/drop-brand-08.png",
+            "img": "/data/assets/png/en_dk_eg-logo-05.png",
             "name": "calvin klein",
             "__collections__": {}
           },
           "mi7bTYM7AkBHVZjzPT5X": {
-            "img": "https://a.nooncdn.com/cms/pages/20210824/a985b37cdf68df0944d99557dedd0372/drop-brand-03.png",
+            "img": "/data/assets/png/en_mb_eg-logo-0.png",
             "name": "boss",
             "__collections__": {}
           },
           "x1ri3zeDRcSzroKlCheK": {
-            "img": "https://a.nooncdn.com/cms/pages/20210824/a985b37cdf68df0944d99557dedd0372/drop-brand-09.png",
+            "img": "/data/assets/png/en_mb_eg-logo-07.png",
             "name": "mango",
             "__collections__": {}
           }
