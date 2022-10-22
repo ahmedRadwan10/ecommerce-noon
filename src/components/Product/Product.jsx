@@ -56,7 +56,7 @@ const Product = () => {
                         <div className={styles.nav_container}>
                                     <Link to={`/${product.category.title}`}>{product.category.title}</Link>
                                     <span><i className="fa-solid fa-chevron-right"></i></span>
-                                    <Link to={`/${product.category.title}/${product.subCategory.title}`}>{product.subCategory.title}</Link>
+                                    <Link to="">{product.subCategory.title}</Link>
                         </div>
                         <div className={styles.flex_container}>
                                 <div className={styles.product_img_container}>

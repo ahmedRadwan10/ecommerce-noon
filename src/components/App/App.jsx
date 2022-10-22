@@ -6,7 +6,7 @@ import styles from '../Header/CategoryNav.module.css';
 import Category from '../Category/Category';
 import Product from '../Product/Product';
 import Footer from '../Footer/Footer';
-import { lazy, useState } from 'react';
+import { lazy } from 'react';
 import { Suspense } from 'react';
 import Spinner from '../Spinner/Spinner';
 
@@ -26,8 +26,8 @@ function App() {
             <Suspense fallback={<Spinner />}>
                 <Routes>
                       <Route path="/" element={<Home />} />
-                      <Route path="/:categoryTitle" element={<Category />} />
-                      <Route path="/:catTitle/:subID/:productID" element={<Product />} />
+                      <Route path="/:categoryTitle/" element={<Category />} />
+                      <Route path="/:catTitle/:subID/:productID/" element={<Product />} />
                 </Routes>
             </Suspense>
             <Footer />  

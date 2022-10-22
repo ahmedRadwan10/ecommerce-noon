@@ -87,3 +87,15 @@ a {
 .category_overview .photos_container img:nth-of-type(2) {
     width: 200px;
 }
+
+@media screen and (max-width: 1500px) {
+    .category_overview .photos_container img:first-of-type {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .category_overview .photos_container img:nth-of-type(2) {
+        display: none;
+    }
+}
