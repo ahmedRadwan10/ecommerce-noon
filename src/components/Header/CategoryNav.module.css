@@ -15,9 +15,7 @@
 }
 
 .category_list {
-    width: 1025px;
-    height: 45px;
-    /* padding-left: 35px; */
+    height: 3em;
     display: flex;
     align-items: center;
     flex-shrink: 0;
@@ -27,11 +25,11 @@
 
 .category_list li {
     height: 100%;
-    padding: 0 15px;
+    padding: 0 1em;
     display: flex;
     align-items: center;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: var(--dark-gray);
     cursor: pointer;
 }
@@ -41,38 +39,16 @@
     box-shadow: var(--shadow01);
 }
 
+
+/* ..................................... */
+
 /* ...Media Queries... */
 
-@media screen and (max-width: 1285px) {
+/* .................................................. */
+/* Small Screen  */
+@media screen and (max-width: 992px) {
+    .category_nav {
+        display: none;
+    }
 
-    .list_container:hover button {
-        width: 30px;
-        height: 30px;
-        position: fixed;
-        top: calc(65px + (45px / 2));
-        transform: translateY(-50%);
-        border: none;
-        outline: none;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255);
-        cursor: pointer;
-        transition: 0.2s all ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .list_container button:hover {
-        background-color: var(--yellow);
-    }
-    
-    .list_container button img {
-        width: 15px;
-        height: 15px;
-    }
-    
-    .list_container button:nth-of-type(2) {
-        right: 15px;
-    }
-    
-  }
+}

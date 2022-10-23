@@ -38,6 +38,10 @@
   --shadow02: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: var(--en-font);
   background-color: var(--bg03);
@@ -47,3 +51,33 @@ a {
   display: flex;
   align-items: center;
 }
+
+/* ......................................... */
+
+/* ...Media Queries... */
+
+/* .................................................. */
+/* Small Screen  */
+@media screen and (max-width: 768px) {
+    html {
+      font-size: 13px;
+    }
+}
+  /* .................................................. */
+  /* Medium Screen  */
+@media (min-width: 769px) and (max-width: 992px) {
+    html {
+      font-size: 14px;
+    }
+    
+}
+/* .................................................. */
+/* Large Screen  */
+@media (min-width: 993px) {
+    html {
+      font-size: 16px;
+    }
+}
+
+
+

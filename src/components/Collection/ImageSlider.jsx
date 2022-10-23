@@ -8,6 +8,10 @@ const ImageSlider = ({ slider }) => {
     const imgsSliderElement = useRef();
     const paginationElement = useRef();
 
+    if (imgsSliderElement.current) imgsSliderElement.current.onscroll = () => {
+        if (sliderIsAutoplay) setAutoplay(false);
+    }
+
     const getNumberOfSliderImgs = () => {
         if (slider) setCount(slider.sliderImgs.length);
     }

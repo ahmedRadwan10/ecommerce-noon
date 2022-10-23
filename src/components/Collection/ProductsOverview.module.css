@@ -5,7 +5,7 @@
     background-color: var(--white);
     padding: 30px;
     position: relative;
-    height: 29vw;
+    height: 33em;
 }
 
 .main_container .scroll_btn {
@@ -30,29 +30,32 @@
 
 .main_container .header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .main_container .header h2 {
+    font-size: 1.4rem;
     width: 100%;
     color: var(--dark-gray);
-    margin-bottom: 30px;
 }
 
 .main_container .header button {
     width: 150px;
     height: 100%;
-    padding: 15px 0;
+    padding: 1rem 0;
     outline: none;
     border: 1px solid black;
     color: var(--dark-gray);
     background-color: transparent;
     font-weight: 700;
+    font-size: 0.7rem;
     cursor: pointer;
 }
 
 .main_container .products_container {
-    height: 20vw;
+    height: 24em;
     padding: 0 60px;
     display: flex;
     gap: 30px;
@@ -144,6 +147,29 @@
 .main_container .product_container .product_footer span:nth-of-type(2) {
     color: var(--light-gray);
     font-size: 10px;
+}
+
+
+/* ......................................... */
+
+/* ...Media Queries... */
+
+/* .................................................. */
+/* Small Screen  */
+@media screen and (max-width: 992px) {
+    .main_container .header button {
+        border: none;
+        color: var(--blue);
+        text-decoration: underline;
+        padding: 0;
+    }
+    .main_container .scroll_btn {
+        display: none;
+    }
+    .main_container .products_container {
+        padding: 0;
+    }
+    
 }
 
 

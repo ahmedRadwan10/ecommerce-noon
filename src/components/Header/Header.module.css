@@ -142,8 +142,33 @@
 
 /* ...Media Queries... */
 
-@media screen and (max-width: 1290px) {
+/* .................................................. */
+/* Small Screen  */
+@media screen and (max-width: 768px) {
+    .Header {
+        gap: 0;
+    }
+    .logo {
+        display: none;
+    }
+    .location_container {
+        display: none;
+    } 
     .search_input {
-        width: 40%;
+        width: 100%;
+    }
+    .right_header {
+        display: none;
+    }
+    
+}
+/* .................................................. */
+/* Medium Screen  */
+@media (min-width: 769px) and (max-width: 992px) {
+    .search_input {
+        width: 70%;
+    }
+    .right_header {
+        display: none;
     }
 }

@@ -18,9 +18,13 @@
 
 .imgs_slider_container .imgs_slider {
     display: flex;
-    overflow: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
+}
+
+.imgs_slider_container .imgs_slider::-webkit-scrollbar {
+    display: none;
 }
 
 .imgs_slider_container .imgs_slider img {
@@ -81,5 +85,24 @@
 
 .imgs_slider_container .pagination span:first-of-type {
     background-color: var(--yellow);
+}
+
+
+/* ......................................... */
+
+/* ...Media Queries... */
+
+/* .................................................. */
+/* Small Screen  */
+@media screen and (max-width: 992px) {
+    .imgs_slider_container img {
+        margin: 0;
+    }
+    .imgs_slider_container button {
+        display: none;
+    }
+    .imgs_slider_container .pagination {
+        display: none;
+    }
 }
 
