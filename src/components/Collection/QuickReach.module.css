@@ -14,3 +14,15 @@
     margin: 0 10px;
     cursor: pointer;
 }
+
+/* ......................................... */
+
+/* ...Media Queries... */
+
+/* .................................................. */
+/* Small Screen  */
+@media screen and (max-width: 768px) {
+   .main_container {
+      display: none;
+   }
+}

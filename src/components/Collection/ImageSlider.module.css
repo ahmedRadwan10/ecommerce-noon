@@ -28,7 +28,7 @@
 }
 
 .imgs_slider_container .imgs_slider img {
-    min-width: 100%;
+    width: 100%;
     object-fit: cover;
     cursor: pointer;
     scroll-snap-align: center;

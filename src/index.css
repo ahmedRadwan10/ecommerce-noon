@@ -60,16 +60,15 @@ a {
 /* Small Screen  */
 @media screen and (max-width: 768px) {
     html {
-      font-size: 13px;
+      font-size: 12px;
     }
 }
-  /* .................................................. */
-  /* Medium Screen  */
+/* .................................................. */
+/* Medium Screen  */
 @media (min-width: 769px) and (max-width: 992px) {
     html {
       font-size: 14px;
-    }
-    
+    } 
 }
 /* .................................................. */
 /* Large Screen  */

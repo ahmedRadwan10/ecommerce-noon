@@ -45,7 +45,7 @@
 }
 
 .product_img_container {
-    min-width: 400px;
+    min-width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,6 +321,32 @@
 
 .facility p {
     font-size: 0.8rem;
+}
+
+/* ...Media Queries... */
+
+/* .................................................. */
+/* Small Screen  */
+@media screen and (max-width: 1366px) {
+    .nav_container {
+        margin: 15px 0;
+    }
+    .product_img_container {
+        align-self: center;
+    }
+    .flex_container {
+        padding: 0 8%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5em;
+    }
+    .all_data_container {
+        width: 100%;
+    }
+    .more_data_container {
+        border: none;
+        padding-left: 0;
+    }
 }
 
 
