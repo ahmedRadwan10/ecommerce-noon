@@ -45,6 +45,7 @@
 }
 
 .product_img_container {
+    margin-top: 30px;
     min-width: 300px;
     display: flex;
     align-items: center;
@@ -73,7 +74,7 @@
 .model_container {
     margin: 15px 0;
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     white-space: nowrap;
     align-items: center;
     justify-content: space-between;
@@ -259,6 +260,7 @@
 .seller_achievements {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 15px 0 15px 0;
     font-size: 1rem;

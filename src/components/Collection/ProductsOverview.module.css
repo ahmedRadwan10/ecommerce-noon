@@ -42,9 +42,10 @@
 .main_container .header button {
     white-space: nowrap;
     outline: none;
-    border: 1px solid black;
-    color: var(--dark-gray);
-    background-color: transparent;
+    border: none;
+    color: var(--blue);
+    text-decoration: underline;
+    padding: 0;
     font-weight: 700;
     font-size: 0.7rem;
     cursor: pointer;
@@ -154,12 +155,6 @@
 /* .................................................. */
 /* Small Screen  */
 @media screen and (max-width: 992px) {
-    .main_container .header button {
-        border: none;
-        color: var(--blue);
-        text-decoration: underline;
-        padding: 0;
-    }
     .main_container .scroll_btn {
         width: 30px;
         height: 30px;

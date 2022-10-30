@@ -1,7 +1,7 @@
 
 .App {
-    min-height: 240vh;
+    min-height: 120vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }

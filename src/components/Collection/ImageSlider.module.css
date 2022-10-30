@@ -9,11 +9,9 @@
     object-fit: cover;
 }
 
-
 .imgs_slider_container {
     margin-top: 30px;
     position: relative;
-    height: 19vw;
 }
 
 .imgs_slider_container .imgs_slider {
@@ -21,6 +19,7 @@
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    height: 29vw;
 }
 
 .imgs_slider_container .imgs_slider::-webkit-scrollbar {
@@ -62,11 +61,10 @@
     right: 30px;
 }
 
-
 .imgs_slider_container .pagination {
     position: absolute;
     left: 50%;
-    bottom: 10px;
+    bottom: 1.2rem;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -77,7 +75,7 @@
 .imgs_slider_container .pagination span {
     display: block;
     background-color: var(--bg03);
-    width: 30px;
+    width: 1.7rem;
     height: 3px;
     border-radius: 20px;
     transition: 0.3s all ease;
@@ -87,12 +85,12 @@
     background-color: var(--yellow);
 }
 
-
 /* ......................................... */
 
 /* ...Media Queries... */
 
 /* .................................................. */
+
 /* Small Screen  */
 @media screen and (max-width: 992px) {
     .imgs_slider_container img {

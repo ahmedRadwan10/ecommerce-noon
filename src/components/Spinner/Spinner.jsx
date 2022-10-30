@@ -5,7 +5,7 @@ const loaderStyles = {
     position: "relative",
     top: "50%", 
     left: "50%",
-    transform: "translate(-50%, -50%)",
+    transform: "translate(-50%, -100%)",
     opacity: "0.5"
 }
 

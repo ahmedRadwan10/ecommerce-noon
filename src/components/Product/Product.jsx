@@ -8,6 +8,7 @@ import Image from './Image';
 import { removeSelectedProduct } from '../../redux/slices/categorySlice';
 import { lazy } from 'react';
 import Spinner from '../Spinner/Spinner';
+import Footer from '../Footer/Footer';
 
 const Product = () => {
 
@@ -70,6 +71,7 @@ const Product = () => {
             <Suspense fallback={''}>
                 <ProductsOverview data={{ ...subCategoryDeal, title: `${subCategory.title} deals` }}/>
                 <ProductsOverview data={{ ...subCategory, title: `More ${subCategory.title}` }}/>
+                <Footer />      
             </Suspense>
         </div>
     );

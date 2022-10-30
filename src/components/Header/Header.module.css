@@ -52,7 +52,7 @@
 }
 
 .deliver_text {
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 300;
   color: var(--dark-gray);
 }
@@ -62,7 +62,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 800;
   font-family: var(--ar-font);
   color: var(--dark-gray);

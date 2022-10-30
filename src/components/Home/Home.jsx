@@ -6,16 +6,23 @@ import QuickReach from "../Collection/QuickReach";
 import { getSlider } from "../../apis/sliders";
 import { getQuickReach } from "../../apis/quickReachs";
 import { getAllDealsProducts, getHotDealsProducts } from "../../apis/products";
+// import Footer from "../Footer/Footer";
 
 
+const ProductsOverview = lazy(async () =>  {
+  return new Promise(resolve => setTimeout(resolve, 500)).then(
+    () => import("../Collection/ProductsOverview")
+  );
+});
+
+const Footer = lazy(async () => {
+  return new Promise(resolve => setTimeout(resolve, 4000)).then(
+    () => import("../Footer/Footer")
+  );
+});
 
 const Home = () => {
   
-  const ProductsOverview = lazy(async () =>  {
-    return new Promise(resolve => setTimeout(resolve, 1000)).then(
-      () => import("../Collection/ProductsOverview")
-    );
-  });
 
   const slider = useSelector(({ collectionState }) => collectionState.sliders["home"]);
   const quickReach = useSelector(({ collectionState }) => collectionState.quickReachs["home"]);
@@ -27,6 +34,7 @@ const Home = () => {
   }
   
   useEffect(() => {
+    window.scrollTo(0, 0);
     getSlider(dispatch, "home");
     getQuickReach(dispatch, "home");
     getHotDealsProducts(dispatch, 50);
@@ -38,8 +46,11 @@ const Home = () => {
                 <ImageSlider slider={slider} />       
                 <QuickReach quickReach={quickReach} />
                 <Suspense fallback={''}>
-                  { renderProductsOverviews() } 
+                  {renderProductsOverviews()} 
                 </Suspense>
+                <Suspense fallback={''}>
+                  <Footer />      
+                </Suspense>      
             </div>
     );
 };
