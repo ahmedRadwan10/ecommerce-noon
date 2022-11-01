@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { getCategoryProducts } from '../../apis/products';
 import { getSlider } from '../../apis/sliders';
 import ImageSlider from '../Collection/ImageSlider';
+import Footer from '../Footer/Footer';
 import Spinner from '../Spinner/Spinner';
 import styles from "./Category.module.css";
 
@@ -35,7 +36,8 @@ const Category = () => {
         <div className={styles.main_container}>
             <Suspense fallback={<Spinner />}>
                 <ImageSlider slider={slider} />    
-                { renderProductsOverviews() } 
+                {renderProductsOverviews()} 
+                <Footer />
             </Suspense>
         </div>
     );

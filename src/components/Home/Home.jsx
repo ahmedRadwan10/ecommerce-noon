@@ -6,23 +6,21 @@ import QuickReach from "../Collection/QuickReach";
 import { getSlider } from "../../apis/sliders";
 import { getQuickReach } from "../../apis/quickReachs";
 import { getAllDealsProducts, getHotDealsProducts } from "../../apis/products";
-// import Footer from "../Footer/Footer";
-
-
-const ProductsOverview = lazy(async () =>  {
-  return new Promise(resolve => setTimeout(resolve, 500)).then(
-    () => import("../Collection/ProductsOverview")
-  );
-});
-
-const Footer = lazy(async () => {
-  return new Promise(resolve => setTimeout(resolve, 4000)).then(
-    () => import("../Footer/Footer")
-  );
-});
+import Spinner from "../Spinner/Spinner";
 
 const Home = () => {
   
+  const ProductsOverview = lazy(async () =>  {
+    return new Promise(resolve => setTimeout(resolve, 500)).then(
+      () => import("../Collection/ProductsOverview")
+    );
+  });
+  
+  const Footer = lazy(async () => {
+    return new Promise(resolve => setTimeout(resolve, 4000)).then(
+      () => import("../Footer/Footer")
+    );
+  });
 
   const slider = useSelector(({ collectionState }) => collectionState.sliders["home"]);
   const quickReach = useSelector(({ collectionState }) => collectionState.quickReachs["home"]);
@@ -41,18 +39,18 @@ const Home = () => {
     getAllDealsProducts(dispatch, 30);
   }, [dispatch]);
 
-    return (
-            <div className={styles.home_container}>
-                <ImageSlider slider={slider} />       
-                <QuickReach quickReach={quickReach} />
-                <Suspense fallback={''}>
-                  {renderProductsOverviews()} 
-                </Suspense>
-                <Suspense fallback={''}>
-                  <Footer />      
-                </Suspense>      
-            </div>
-    );
+  return (
+      <div className={styles.home_container}>
+          <Suspense fallback={<Spinner />}>
+            <ImageSlider slider={slider} />       
+            <QuickReach quickReach={quickReach} />
+            { renderProductsOverviews() } 
+          </Suspense>
+          <Suspense fallback={''}>
+            <Footer />      
+          </Suspense>      
+      </div>
+  );
 };
 
 export default Home;

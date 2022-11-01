@@ -1,27 +1,11 @@
 import React from 'react';
+import styles from './Spinner.module.css'
 
-const loaderStyles = {
-    width: "150px",
-    position: "relative",
-    top: "50%", 
-    left: "50%",
-    transform: "translate(-50%, -100%)",
-    opacity: "0.5"
-}
-
-const containerStyles = {
-    position: "absolute",
-    top: "110px", 
-    left: "0",
-    right: "0",
-    bottom: "0",
-    backgroundColor: "var(--bg03)"
-}
 
 const Spinner = () => {
     return (
-        <div style={containerStyles}>
-          <img style={loaderStyles} src="/data/assets/gif/noon-loader.gif" alt="Loader" />
+        <div className={styles.container}>
+          <img className={styles.loader} src="/data/assets/gif/noon-loader.gif" alt="Loader" />
         </div>
     );
 }

@@ -132,6 +132,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .more_info_container p {
@@ -184,14 +185,16 @@ img {
   }
   .more_info_container {
     padding-bottom: 5em;
-    flex-direction: column;
-    gap: 2em;
+    justify-content: center;
+    gap: 3em;
   }
   .more_links {
-    width: 100px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+  }
+  .more_links li {
+    width: 100px;
   }
 }

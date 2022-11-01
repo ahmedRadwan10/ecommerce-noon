@@ -260,6 +260,7 @@
 .seller_achievements {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
     padding: 15px 0 15px 0;
@@ -289,7 +290,7 @@
     text-align: center;
     padding: 0 0 0 15px;
     font-size: 0.8rem;
-    border-left: 1px solid #8080802b
+    /* border-left: 1px solid #8080802b */
 }
 
 .as_described span {
@@ -297,8 +298,6 @@
     font-weight: 600;
     color: var(--green);
 }
-
-
 
 .facilities {
     padding: 15px 0;
@@ -348,6 +347,12 @@
     .more_data_container {
         border: none;
         padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 542px) {
+    .as_described {
+        border: none;
     }
 }
 
