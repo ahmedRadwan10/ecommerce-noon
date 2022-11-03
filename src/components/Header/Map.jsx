@@ -1,10 +1,19 @@
+import { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateLocationAddress } from '../../redux/slices/locationSlice';
-import GoogleMap from './GoogleMap';
 import styles from './Map.module.css';
+import Spinner from '../Spinner/Spinner';
+import { lazy } from 'react';
+
+const GoogleMap = lazy(async () =>  {
+  return new Promise(resolve => setTimeout(resolve, 1000)).then(
+    () => import("./GoogleMap")
+  );
+});
 
 const Map = ({ isShown, hideMap }) => {
+
   const lat = useSelector(({ locationState }) => locationState.lat);
   const lng = useSelector(({ locationState }) => locationState.lng);
   const addressChanged = useSelector(({ locationState }) => locationState.addressChanged);
@@ -31,13 +40,15 @@ const Map = ({ isShown, hideMap }) => {
           </div>
         </div>
         <div className={styles.map}>
-          <GoogleMap
-            isMarkerShown
-            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `100%` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
-          />
+        <Suspense fallback={<Spinner />}>
+            <GoogleMap
+              isMarkerShown
+              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `100%` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+            />
+        </Suspense>
         </div>
         <div className={styles.confirm_container}>
           <button onClick={confirmLocation} disabled={!addressChanged}>
