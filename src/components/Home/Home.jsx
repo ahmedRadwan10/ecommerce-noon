@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
       <div className={styles.home_container}>
-          <Suspense fallback={<Spinner />}>
+          <Suspense fallback={''}>
             <ImageSlider slider={slider} />       
             <QuickReach quickReach={quickReach} />
             { renderProductsOverviews() } 

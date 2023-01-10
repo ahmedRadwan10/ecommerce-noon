@@ -12,6 +12,15 @@
 .imgs_slider_container {
     margin-top: 30px;
     position: relative;
+    transform: translateY(30px);
+}
+
+.imgs_slider_container_skeleton {
+    height: calc(22vw + 3em);
+    border-radius: 10px;
+    background-color: var(--bg02);
+    margin-top: 30px;
+    transform: translateY(30px);
 }
 
 .imgs_slider_container .imgs_slider {
@@ -19,7 +28,12 @@
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    height: 29vw;
+    height: calc(22vw + 3em);
+    border-radius: 10px;
+}
+
+.imgs_slider_skeleton {
+    background-color: blue;
 }
 
 .imgs_slider_container .imgs_slider::-webkit-scrollbar {
@@ -93,8 +107,12 @@
 
 /* Small Screen  */
 @media screen and (max-width: 992px) {
+    .imgs_slider_container .imgs_slider {
+        border-radius: 10px;
+    }
     .imgs_slider_container img {
         margin: 0;
+        object-position: 30%;
     }
     .imgs_slider_container button {
         display: none;

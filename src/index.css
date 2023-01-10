@@ -48,6 +48,7 @@ body {
   font-family: var(--en-font);
   background-color: var(--bg03);
   padding-bottom: 6em;
+  overflow-x: hidden;
 }
 
 p {
