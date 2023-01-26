@@ -2,6 +2,7 @@
 .category_nav {
     background-color: var(--bg02);
     display: flex;
+    padding-left: 7%;
 }
 
 .list_container {

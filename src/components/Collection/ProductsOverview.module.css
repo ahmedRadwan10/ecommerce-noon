@@ -21,7 +21,12 @@
     align-items: center;
     cursor: pointer;
     z-index: 2;
+    transition: 0.3s all ease;
 }
+
+/* .main_container .scroll_btn:hover {
+    background-color: var(--dark-gray);
+} */
 
 .main_container .scroll_btn i {
     transform: translateX(13px);
@@ -62,7 +67,7 @@
 }
 
 .main_container .products_container {
-    height: 24em;
+    height: 28em;
     /* padding: 0 60px; */
     display: flex;
     gap: 30px;
@@ -75,7 +80,7 @@
 }
 
 .main_container .product_container {
-    min-width: 250px;
+    min-width: 300px;
     position: relative;
     padding: 0 20px 10px;
     background-color: var(--white);

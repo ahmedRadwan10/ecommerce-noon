@@ -1,53 +1,11 @@
-
-.header_img_container {
-    cursor: pointer;
-    /* background-color: #3A86C2; */
+.main_container {
+   position: relative;
+   margin-top: 30px;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
 }
 
-.header_img_container img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.imgs_slider_container {
-    margin-top: 30px;
-    position: relative;
-    transform: translateY(30px);
-}
-
-.imgs_slider_container_skeleton {
-    height: calc(22vw + 3em);
-    border-radius: 10px;
-    background-color: var(--bg02);
-    margin-top: 30px;
-    transform: translateY(30px);
-}
-
-.imgs_slider_container .imgs_slider {
-    display: flex;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    height: calc(22vw + 3em);
-    border-radius: 10px;
-}
-
-.imgs_slider_skeleton {
-    background-color: blue;
-}
-
-.imgs_slider_container .imgs_slider::-webkit-scrollbar {
-    display: none;
-}
-
-.imgs_slider_container .imgs_slider img {
-    width: 100%;
-    object-fit: cover;
-    cursor: pointer;
-    scroll-snap-align: center;
-}
-
-.imgs_slider_container button {
+.main_container button {
     width: 3vw;
     height: 3vw;
     border: none;
@@ -61,43 +19,21 @@
     align-items: center;
     cursor: pointer;
     opacity: 0.5;
+    z-index: 9;
 } 
 
-.imgs_slider_container button  i {
+.main_container button  i {
     font-size: 1vw;
 }
 
-.imgs_slider_container button:first-of-type {
+.main_container button:first-of-type {
     left: 30px;
 }
 
-.imgs_slider_container button:nth-of-type(2) {
+.main_container button:nth-of-type(2) {
     right: 30px;
 }
 
-.imgs_slider_container .pagination {
-    position: absolute;
-    left: 50%;
-    bottom: 1.2rem;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.imgs_slider_container .pagination span {
-    display: block;
-    background-color: var(--bg03);
-    width: 1.7rem;
-    height: 3px;
-    border-radius: 20px;
-    transition: 0.3s all ease;
-}
-
-.imgs_slider_container .pagination span:first-of-type {
-    background-color: var(--yellow);
-}
 
 /* ......................................... */
 
@@ -107,17 +43,7 @@
 
 /* Small Screen  */
 @media screen and (max-width: 992px) {
-    .imgs_slider_container .imgs_slider {
-        border-radius: 10px;
-    }
-    .imgs_slider_container img {
-        margin: 0;
-        object-position: 30%;
-    }
-    .imgs_slider_container button {
-        display: none;
-    }
-    .imgs_slider_container .pagination {
+    .main_container button {
         display: none;
     }
 }
